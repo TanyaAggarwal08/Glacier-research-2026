@@ -1,0 +1,40 @@
+filter:
+  nprt: 200
+  verbose: true
+  output_filename: "particle_da.h5"
+  seed: 42
+
+model:
+  llw2d:
+    # Domain & grid — matches inputs/parametersW1.yaml (paper showcase)
+    x_length: 200.0e3
+    y_length: 200.0e3
+    nx: 51
+    ny: 51
+
+    # 15 irregular gauges from the canonical showcase file
+    station_filename: "inputs/stationsW1.txt"
+    obs_noise_std: [0.01]
+
+    # Process noise (Matérn GRF, per state variable)
+    nu: 2.5
+    lambda: 5.0e3
+    sigma: [0.1, 10.0, 10.0]
+
+    # Initial-state noise — tight so the wave peak is the dominant signal
+    nu_initial_state: 2.5
+    lambda_initial_state: 5.0e3
+    sigma_initial_state: 0.001
+
+    # Time discretisation: 5 s × 260 steps covers T = 0..1300 s
+    n_integration_step: 10
+    time_step: 5.0
+
+    # Initial wave peak (the tsunami source)
+    peak_height: 30.0
+    peak_position: [1.0e4, 1.0e4]
+    use_peak_initial_state_mean: true
+
+simulate_observations:
+  seed: 123
+  n_time_step: 260
