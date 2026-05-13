@@ -1,7 +1,7 @@
 filter:
   nprt: 200
   verbose: true
-  output_filename: "particle_da.h5"
+  output_filename: "bootstrap-pf-experiments/results/particle_da.h5"
   seed: 42
 
 model:

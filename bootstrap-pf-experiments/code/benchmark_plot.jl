@@ -1,7 +1,13 @@
-using HDF5, Statistics, Plots
+# Run from anywhere:
+#   julia --project=test bootstrap-pf-experiments/code/benchmark_plot.jl
+ENV["GKSwstype"] = "100"   # headless GR backend for PNG output
 
-const OBS_PATH = "benchmark_obs.h5"
-const DA_PATH  = "particle_da.h5"
+const REPO_ROOT = realpath(joinpath(@__DIR__, "..", ".."))
+const RESULTS_DIR = joinpath(REPO_ROOT, "bootstrap-pf-experiments", "results")
+const OBS_PATH = joinpath(RESULTS_DIR, "benchmark_obs.h5")
+const DA_PATH  = joinpath(RESULTS_DIR, "particle_da.h5")
+
+using HDF5, Statistics, Plots
 
 # Paper snapshot times (s) → with time_step = 5.0 these are integer step counts
 const SNAPSHOT_TIMES  = [0, 320, 740, 960, 1280]
@@ -69,7 +75,7 @@ end
 
 fig1 = plot(panels...; layout = (5, 2), size = (1200, 2400),
             plot_title = "LLW2d Bootstrap PF  (N=$N_PARTICLES)")
-savefig(fig1, "benchmark_fields.png")
+savefig(fig1, joinpath(RESULTS_DIR, "benchmark_fields.png"))
 println("Saved benchmark_fields.png")
 
 # ── Figure 2: ESS over time ──────────────────────────────────────────────────
@@ -91,7 +97,7 @@ hline!(fig2, [N_PARTICLES * 0.1];
 vline!(fig2, SNAPSHOT_STEPS[2:end];
        linestyle = :dot, color = :gray, alpha = 0.6,
        label = "snapshot times")
-savefig(fig2, "benchmark_ess.png")
+savefig(fig2, joinpath(RESULTS_DIR, "benchmark_ess.png"))
 println("Saved benchmark_ess.png")
 
 # ── Figure 3: sorted normalised weights at last snapshot ──────────────────────
@@ -102,7 +108,7 @@ fig3 = bar(1:length(w_final_norm), w_final_norm;
            xlabel = "Particle rank (sorted)", ylabel = "Normalised weight",
            title = "Sorted normalised weights at t=$(final_step)  (T=$(SNAPSHOT_TIMES[end])s)",
            legend = false)
-savefig(fig3, "benchmark_weights.png")
+savefig(fig3, joinpath(RESULTS_DIR, "benchmark_weights.png"))
 println("Saved benchmark_weights.png")
 
 # ── Summary ──────────────────────────────────────────────────────────────────

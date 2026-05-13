@@ -1,21 +1,31 @@
+# Run from the repo root:
+#   julia --project=test bootstrap-pf-experiments/code/benchmark_run.jl
+# (the script `cd`s to the repo root itself, so launching from any directory works)
+
+const REPO_ROOT = realpath(joinpath(@__DIR__, "..", ".."))
+cd(REPO_ROOT)
+@info "Working directory set to $(pwd())"
+
 using ParticleDA
-include(joinpath("test", "models", "llw2d.jl"))
+include(joinpath(REPO_ROOT, "test", "models", "llw2d.jl"))
 using .LLW2d
 using HDF5
 
-const YAML_PATH = "benchmark.yaml"
-const OBS_PATH  = "benchmark_obs.h5"
-const DA_PATH   = "particle_da.h5"
+const YAML_PATH = joinpath("bootstrap-pf-experiments", "code", "benchmark.yaml")
+const OBS_PATH  = joinpath("bootstrap-pf-experiments", "results", "benchmark_obs.h5")
+const DA_PATH   = joinpath("bootstrap-pf-experiments", "results", "particle_da.h5")
+
+mkpath(dirname(OBS_PATH))
 
 # Remove stale output
 isfile(OBS_PATH) && rm(OBS_PATH)
 isfile(DA_PATH)  && rm(DA_PATH)
 
-println("=== Step 1: Simulating observations (seed=123, T=50) ===")
+println("=== Step 1: Simulating observations (seed=123, T=260) ===")
 simulate_observations_from_model(LLW2d.init, YAML_PATH, OBS_PATH)
 println("Observations written to: $OBS_PATH")
 
-println("\n=== Step 2: Bootstrap particle filter (N=50, T=50) ===")
+println("\n=== Step 2: Bootstrap particle filter (N=200, T=260) ===")
 run_particle_filter(
     LLW2d.init,
     YAML_PATH,
