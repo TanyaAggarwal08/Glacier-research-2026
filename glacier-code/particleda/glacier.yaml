@@ -1,0 +1,30 @@
+# Run-02: LowLevel-style filter hygiene applied to the glacier problem.
+# Changes vs run01_tight_prior:
+#   nprt              200   -> 1000   (more particles)
+#   init_std_theta    0.05  -> 0.30   (wide prior, LowLevel-style)
+#   obs_noise_std     0.05  -> 0.10   (LowLevel uses ~10% of signal; small inflation)
+#   process_std_theta 0.007 -> 0.007  (unchanged)
+#   n_time_step       50    -> 200    (match LowLevel cadence)
+filter:
+  nprt: 1000
+  verbose: true
+  output_filename: "glacier-code/particleda/results/particle_da.h5"
+  seed: 42
+
+model:
+  glacier:
+    nx: 40
+    ny: 40
+    x_length: 160000.0
+    y_length: 160000.0
+    sensor_stride: 16
+    init_std_theta: 0.30
+    process_std_theta: 0.007
+    obs_noise_std: 0.10
+    advection_epsilon: 0.0005
+    n_integration_step: 1
+    time_step: 1.0
+
+simulate_observations:
+  seed: 123
+  n_time_step: 200
