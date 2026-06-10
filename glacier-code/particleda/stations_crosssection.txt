@@ -1,0 +1,15 @@
+# Sensors for the particle-tracking visualisation.
+# One sensor sits on the cross-section row (y = 76 km, the row plotted
+# in crosssection_anim.gif). The other nine are scattered elsewhere so the
+# filter still has decent spatial information.
+# Columns: x (m), y (m).
+80000.0, 76000.0
+30000.0, 30000.0
+120000.0, 30000.0
+30000.0, 120000.0
+120000.0, 120000.0
+50000.0, 100000.0
+100000.0, 50000.0
+20000.0, 52000.0
+60000.0, 132000.0
+132000.0, 92000.0

@@ -1,0 +1,26 @@
+filter:
+  nprt: 1000
+  verbose: true
+  output_filename: "glacier-code/particleda/results/run06_obs_baseline/particle_da.h5"
+  seed: 42
+
+model:
+  glacier:
+    nx: 40
+    ny: 40
+    x_length: 160000.0
+    y_length: 160000.0
+    sensor_stride: 100
+    init_std_beta: 300.0
+    process_std_beta: 7.0
+    obs_noise_std: 0.10
+    advection_epsilon: 0.0005
+    n_integration_step: 10
+    time_step: 3600.0
+    min_beta: 10.0
+    noise_length_scale: 30000.0
+    disable_observations: false
+
+simulate_observations:
+  seed: 123
+  n_time_step: 200

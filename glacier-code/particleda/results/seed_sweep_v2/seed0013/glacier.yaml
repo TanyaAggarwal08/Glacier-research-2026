@@ -1,0 +1,23 @@
+filter:
+  nprt: 1000
+  verbose: true
+  output_filename: "glacier-code/particleda/results/seed_sweep_v2/seed0013/particle_da.h5"
+  seed: 13
+
+model:
+  glacier:
+    nx: 40
+    ny: 40
+    x_length: 160000.0
+    y_length: 160000.0
+    sensor_stride: 100
+    init_std_theta: 0.30
+    process_std_theta: 0.007
+    obs_noise_std: 0.10
+    advection_epsilon: 0.0005
+    n_integration_step: 1
+    time_step: 400.0
+
+simulate_observations:
+  seed: 13
+  n_time_step: 200

@@ -193,6 +193,44 @@ For now, **run-02 is healthy enough to move on with**. Next planned tweaks (only
 - Replace the surrogate with WAVI (the actual point of the project).
 - Then consider Optimal proposal or upstream-PR adaptive resampling.
 
+## Run-03 — reduce observation count (Phase B.3 lever)
+
+After run-02 the per-step ESS was still bouncing around 5–15 % of Np despite the wide prior — pressure ≈ 900 from `100 × (0.3/0.10)²`. The cheapest remaining lever was `n_obs`: drop sensors 100 → 16 by changing `sensor_stride: 16 → 100`. Predicted new pressure: `16 × (0.3/0.10)² = 144` — a ~6× cut.
+
+run-02 saved to [results/run02_wide_prior_100obs/](../glacier-code/particleda/results/run02_wide_prior_100obs/).
+
+### Results
+
+| Metric | run-02 (100 obs) | run-03 (16 obs) |
+|---|---|---|
+| Pressure | ~900 | **~144** |
+| ESS | 50–400 / 1000 (5–40 % Np) | **400–800 / 1000 (40–80 % Np)**, mostly **above 0.5·Np** |
+| max(weight) | spikes at start, then mostly <0.1 | one early spike at 0.55, then **mostly <0.02** |
+| RMSE(β) | 410 → 120 | 350 → 125 (similar final) |
+| Pointwise β tracking | PF mean catches truth by t≈120 | PF mean tracks truth from **t≈30** |
+
+This is exactly what the tsunami pressure formula predicted: cutting `n_obs` by ~6× pushes the run from "high pressure, particles barely informative" to "moderate pressure, ensemble cooperates." The ESS line now sits comfortably above the 0.5·Np reference for the bulk of the run — the canonical "healthy filter" signature.
+
+### Why fewer obs isn't free
+
+Two real costs to keep in mind:
+
+1. **Information thrown away**. With 16 sensors spread across a 40×40 grid we now see ~1 % of cells. The PF mean still tracks the truth because the dynamics couple neighbouring cells through advection, but the *uncertainty* in unobserved regions is genuinely larger than in run-02. We'd see this if we plotted spatial Var(β) — sparse regions wouldn't tighten as much.
+2. **Sampling pattern matters**. We picked sensors at stride 100, which is essentially "every 2.5 rows of the grid" — geographically fine. Real InSAR coverage is usually dense in one region and absent in another. When we move to real data we'll need `station_filename` and explicit (x, y) coordinates, not a stride.
+
+For the synthetic glacier benchmark this is the right call — the budget is satisfied and the filter is healthy. For the real-data run we'll likely have to:
+- accept σ_obs inflation (Phase B.1) on top of obs reduction, or
+- spatially pool obs (B.3 variant: 5×5 super-pixels) rather than subsample, or
+- move to OptimalFilter or localised PF.
+
+### Suggested next steps
+
+The run is healthy enough that the *next* useful experiment isn't more PF tuning — it's:
+
+1. **Confirm robustness**: rerun at 3–5 random seeds to make sure the convergence shape is generic, not a lucky obs realisation.
+2. **σ_obs knee-search**: at fixed 16 obs, sweep `obs_noise_std` ∈ {0.05, 0.10, 0.20} to find the tightest σ_obs that keeps ESS healthy. Tighter σ_obs → better tracking accuracy when the filter can take it.
+3. **Swap surrogate → WAVI** (the actual project goal). The PF plumbing is now provably working; replacing the forward map is a localised change in [glacier-code/particleda/glacier_model.jl](../glacier-code/particleda/glacier_model.jl) (`surrogate_ux!`).
+
 ## Files this note refers to
 
 - This run's outputs: [glacier-code/particleda/results/](../glacier-code/particleda/results/)

@@ -10,10 +10,20 @@ using ParticleDA
 include(joinpath(@__DIR__, "glacier_model.jl"))
 using .Glacier
 using HDF5
+using YAML
 
-const YAML_PATH = joinpath("glacier-code", "particleda", "glacier.yaml")
-const OBS_PATH  = joinpath("glacier-code", "particleda", "results", "glacier_obs.h5")
-const DA_PATH   = joinpath("glacier-code", "particleda", "results", "particle_da.h5")
+# Optional arg: YAML path (defaults to glacier.yaml next to this script).
+const YAML_PATH = if !isempty(ARGS) && isfile(ARGS[1])
+    ARGS[1]
+else
+    joinpath("glacier-code", "particleda", "glacier.yaml")
+end
+@info "Using YAML: $YAML_PATH"
+
+# Output paths derived from YAML's filter.output_filename.
+const _yaml_dict = YAML.load_file(YAML_PATH)
+const DA_PATH = _yaml_dict["filter"]["output_filename"]
+const OBS_PATH = joinpath(dirname(DA_PATH), "glacier_obs.h5")
 
 mkpath(dirname(OBS_PATH))
 

@@ -1,0 +1,11 @@
+# Random scattered sensor locations for the glacier surrogate.
+#
+# Domain        : 160 km x 160 km  (full model area)
+# Sampling area : x in [16 km, 144 km],  y in [16 km, 144 km]
+#                 (i.e. the interior 128 km x 128 km, leaving a 16 km buffer
+#                  from each edge so sensors stay away from the periodic
+#                  boundary where x = 0 wraps to x = 160 km)
+# RNG seed      : 123
+# Count         : 16 stations
+# Format        : x_metres, y_metres  — one station per line, # = comment
+

@@ -44,3 +44,26 @@ alternatively, the backspace key when there is no input in the prompt.
 ## License
 
 The `ParticleDA.jl` package is licensed under the MIT "Expat" License.
+The two-step pattern is always:
+
+<!-- Runner (produces HDF5 files): julia --project=test glacier-code/particleda/run_glacier_pda.jl [optional_yaml]
+Plotter (produces GIFs + PNGs): julia --project=test glacier-code/particleda/plot_glacier_pda.jl [optional_results_dir]
+The three commands you'll use 90% of the time:
+
+
+# 1. Default canonical config (grid-aligned 16 sensors)
+julia --project=test glacier-code/particleda/run_glacier_pda.jl
+julia --project=test glacier-code/particleda/plot_glacier_pda.jl
+
+# 2. Scattered-sensor variant
+julia --project=test glacier-code/particleda/run_glacier_pda.jl  glacier-code/particleda/glacier_random.yaml
+julia --project=test glacier-code/particleda/plot_glacier_pda.jl glacier-code/particleda/results/run05_random_scattered_16obs
+
+# 3. Just re-plot an existing archived run (no filter rerun — fastest iteration)
+julia --project=test glacier-code/particleda/plot_glacier_pda.jl glacier-code/particleda/results/run04_grid_aligned_16obs 
+When to rerun what:
+
+Changed YAML (parameters) → rerun runner + plotter
+Changed glacier_model.jl (physics) → rerun runner + plotter
+Changed stations file → rerun runner + plotter
+Changed plot_glacier_pda.jl only (plot styling) → just plotter (skip the filter, much faster)-->
