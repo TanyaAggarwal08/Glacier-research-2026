@@ -87,7 +87,7 @@ anim = @animate for t in 1:T_plus_1
              xlabel="x (km)", ylabel="β (Pa·s/m)",
              title=@sprintf("Cross-section y=%.0f km,  t=%.1f h",
                             row_y_km, (t-1)*data.dt/3600),
-             ylim=(0, 2200), legend=:topright)
+             ylim=(500, 3500), legend=:topright)
     plot!(p, xs_km, data.mean[row_mid, :, t];
           label="ensemble mean", lw=2, linestyle=:dash, color=:steelblue)
     for k in 1:K
@@ -124,7 +124,7 @@ anim_all = @animate for t in 1:T_plus_1
     p = plot(; xlabel="x (km)", ylabel="β (Pa·s/m)",
              title=@sprintf("ALL %d particles, cross-section y=%.0f km,  t=%.1f h",
                             nprt_all, row_y_km, (t-1)*data.dt/3600),
-             ylim=(0, 2200), legend=:topright)
+             ylim=(500, 3500), legend=:topright)
     for ip in 1:nprt_all
         plot!(p, xs_km, row_slice[:, ip, t];
               label=false, lw=0.4, color=:gray, alpha=0.05)
@@ -152,7 +152,7 @@ p_static = plot(xs_km, data.truth[row_mid, :, end];
                 label="truth", lw=3, color=:black,
                 xlabel="x (km)", ylabel="β (Pa·s/m)",
                 title="Cross-section y=$(round(Int, row_mid*4))km at final time",
-                ylim=(0, 2200))
+                ylim=(500, 3500))
 plot!(p_static, xs_km, data.mean[row_mid, :, end];
       label="ensemble mean", lw=2, linestyle=:dash, color=:steelblue)
 for k in 1:K
@@ -168,6 +168,49 @@ for (i_s, sx_km) in enumerate(sensor_x_km_row)
              label=(i_s==1 ? "obs (β-eq) at final step" : false))
 end
 savefig(p_static, joinpath(OUT, "crosssection_final.png"))
+
+# ─── 1c) Temporal-trail GIF at the on-row sensor cell ──────────────────────
+# At sensor (i=21, j=20), frame at time T shows β(t) for t ∈ [0, T] for all
+# 1000 particles + truth + obs accumulated so far. Lets you see particles
+# propagating through time instead of through space.
+sensor_i, sensor_j = 21, 20
+particles_at_sensor = h5open(TRACK, "r") do f
+    f["particles_all"]["beta"][sensor_j, sensor_i, :, :]    # (NPRT, T+1)
+end
+println("Loaded sensor trail for all $(size(particles_at_sensor,1)) particles")
+
+truth_at_sensor = [data.truth[sensor_j, sensor_i, t] for t in 1:T_plus_1]
+mean_at_sensor  = [data.mean[sensor_j, sensor_i, t]  for t in 1:T_plus_1]
+sensor_obs_k = sensors_on_row[1]
+β_obs_at_sensor = 1000.0 ./ data.obs[sensor_obs_k, :]      # length T
+
+t_axis_h = collect(0:T) .* data.dt ./ 3600
+
+anim_trail = @animate for T_now in 1:T_plus_1
+    t_hist = t_axis_h[1:T_now]
+    p = plot(; xlabel="time (h)", ylabel="β (Pa·s/m)",
+             title=@sprintf("β(t) at sensor (i=%d,j=%d) — frame t=%.1f h",
+                            sensor_i, sensor_j, t_axis_h[T_now]),
+             xlim=(0, t_axis_h[end]), ylim=(500, 3500), legend=:topright)
+    # All particles, thin α-blended
+    for ip in 1:nprt_all
+        plot!(p, t_hist, particles_at_sensor[ip, 1:T_now];
+              label=false, lw=0.4, color=:gray, alpha=0.05)
+    end
+    plot!(p, t_hist, mean_at_sensor[1:T_now];
+          label="ensemble mean", lw=2.5, linestyle=:dash, color=:steelblue)
+    plot!(p, t_hist, truth_at_sensor[1:T_now];
+          label="truth", lw=3, color=:black)
+    # Observations arrive at filter steps t=1..T → physical hours 1..T
+    if T_now >= 2
+        n_obs_shown = T_now - 1
+        scatter!(p, t_axis_h[2:T_now], β_obs_at_sensor[1:n_obs_shown];
+                 marker=:xcross, ms=6, msw=1.5, mc=:red,
+                 label="observation (β-eq)")
+    end
+end
+gif(anim_trail, joinpath(OUT, "sensor_trail_anim.gif"), fps=6)
+println("Saved sensor_trail_anim.gif")
 
 # ─── 2) Spaghetti per probe cell ───────────────────────────────────────────
 sensor_set = Set(data.sensor_idx)
@@ -185,7 +228,7 @@ for k in 1:n_probes
     mean_at  = [data.mean[jr, ic, t]  for t in 1:T_plus_1]
 
     p = plot(; title=title_str, xlabel="time (h)", ylabel="β",
-             ylim=(0, 2200), legend=(k==1 ? :topright : false))
+             ylim=(500, 3500), legend=(k==1 ? :topright : false))
     # All particles, thin
     for ip in 1:nprt
         plot!(p, t_axis ./ 3600, data.probe_beta[ip, :, k];

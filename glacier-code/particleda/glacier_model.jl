@@ -20,7 +20,7 @@ Base.@kwdef struct GlacierModelParameters{T<:AbstractFloat}
     # β-space parameters (state = β directly, no log transform).
     # Defaults give same statistical behaviour as previous log-space (0.30, 0.007)
     # at β ≈ 1000: a 30 % initial spread and 0.7 % per-step process noise.
-    init_std_beta::T = 300.0
+    init_std_beta::T = 150.0
     process_std_beta::T = 7.0
     # Lower clamp on β to keep the surrogate ux = 1000/β well-defined.
     # The default lets β range comfortably; only triggers in extreme noise tails.
@@ -35,6 +35,8 @@ Base.@kwdef struct GlacierModelParameters{T<:AbstractFloat}
     # parameter above, and correlation length set here. Setting ≤ 0 falls back
     # to iid noise (legacy behaviour).
     noise_length_scale::T = 30_000.0
+    # Advection branch — "linear" (constant v=1) or "nonlinear" (v = 1 + ε·β).
+    advection_type::String = "linear"
     # Ablation flag: when true, get_log_density returns 0 for every particle,
     # so weights stay uniform and the filter ignores observations entirely.
     # Truth generation and observation simulation are unaffected.
@@ -118,11 +120,17 @@ function init(parameters_dict::Dict, n_tasks::Int=1)
     user_input = (; (Symbol(k) => v for (k, v) in raw)...)
     p = GlacierModelParameters(; user_input...)
 
-    ω = 2π / p.x_length
+    # Spatial frequency: n_modes full cycles across the domain. Higher → more
+    # ups and downs in the cross-section. n_modes = 1 was the original 4-lobe
+    # field; 3 gives a 6×6-lobe pattern (≈ 27 km half-wavelength on the 160 km
+    # domain), so a cross-section shows ~6 visible peaks.
+    n_modes = 3
+    ω = n_modes * 2π / p.x_length
     xs = range(0.0, p.x_length; length=p.nx)
     ys = range(0.0, p.y_length; length=p.ny)
-    # Prior mean field — same sinusoid as before, but stored directly (no log).
-    β_prior = [1000.0 + 500.0 * sin(ω * xi) * sin(ω * yj) for yj in ys, xi in xs]
+    # Prior mean field — baseline 2000 plus sinusoid amplitude 2000.
+    # β range becomes [0, 4000] (with the min_beta floor catching the troughs).
+    β_prior = [2000.0 + 2000.0 * sin(ω * xi) * sin(ω * yj) for yj in ys, xi in xs]
     β_prior_flat = vec(β_prior)
 
     sensors = _build_sensor_indices(p)
@@ -215,8 +223,10 @@ function ParticleDA.update_state_deterministic!(
 
     dt = p.time_step / p.n_integration_step
 
+    # ── CFL check ────────────────────────────────────────────────────────
     if !_CFL_WARNED[]
-        max_speed_now = maximum(1 .+ ε .* β)
+        max_speed_now = p.advection_type == "nonlinear" ?
+                        maximum(1 .+ ε .* β) : 1.0
         cfl_safe = 0.2 * dx / max_speed_now
         if dt > cfl_safe
             @warn "CFL violation likely" dt cfl_safe
@@ -224,16 +234,43 @@ function ParticleDA.update_state_deterministic!(
         _CFL_WARNED[] = true
     end
 
-    for _ in 1:p.n_integration_step
-        @inbounds for j in 1:ny
-            for i in 1:nx
-                im = mod1(i - 1, nx)
-                dβdx = (β[j, i] - β[j, im]) / dx
-                velocity = 1 + ε * β[j, i]
-                β_new[j, i] = β[j, i] - velocity * dt * dβdx
+    # ── Advection inner loop ─────────────────────────────────────────────
+    # Three branches share periodic BC, buffer swap, and finite-difference
+    # discretisation. They differ in the stencil:
+    #   "linear":       upwind, v = 1.        D_num = ½·v·Δx·(1−CFL) > 0
+    #   "nonlinear":    upwind, v = 1 + ε·β.  Same diffusion plus β-feedback.
+    #   "lax_wendroff": centred-diff + ½·CFL² correction.  D_num ≡ 0 to 2nd order,
+    #                   but introduces dispersion (oscillations near sharp edges).
+    # See glacier-notes/21_numerical_diffusion.md for the modified-equation
+    # derivation and quantitative damping predictions.
+    if p.advection_type == "lax_wendroff"
+        for _ in 1:p.n_integration_step
+            @inbounds for j in 1:ny
+                for i in 1:nx
+                    im = mod1(i - 1, nx)
+                    ip = mod1(i + 1, nx)
+                    v_i  = 1.0 + ε * β[j, i]   # local velocity (linear if ε ≈ 0)
+                    α    = v_i * dt / dx
+                    β_new[j, i] = β[j, i] -
+                                  0.5 * α     * (β[j, ip] - β[j, im]) +
+                                  0.5 * α * α * (β[j, ip] - 2*β[j, i] + β[j, im])
+                end
             end
+            β, β_new = β_new, β
         end
-        β, β_new = β_new, β
+    else
+        is_nonlinear = p.advection_type == "nonlinear"
+        for _ in 1:p.n_integration_step
+            @inbounds for j in 1:ny
+                for i in 1:nx
+                    im = mod1(i - 1, nx)
+                    dβdx = (β[j, i] - β[j, im]) / dx
+                    velocity = is_nonlinear ? (1 + ε * β[j, i]) : 1.0
+                    β_new[j, i] = β[j, i] - velocity * dt * dβdx
+                end
+            end
+            β, β_new = β_new, β
+        end
     end
 
     # state already aliases the same storage as β through reshape, but we

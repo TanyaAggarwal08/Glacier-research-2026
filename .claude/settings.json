@@ -1,4 +1,18 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(julia --project=test -e ' *)",
+      "Bash(julia --project=test glacier-code/particleda/run_linear_advection.jl)",
+      "Bash(julia --project=test glacier-code/particleda/plot_linear_advection.jl)",
+      "Bash(sed -i.bak 's/ylim=\\(0, 2200\\)/ylim=\\(0, 4500\\)/g' glacier-code/particleda/plot_particle_tracking.jl glacier-code/particleda/plot_linear_advection.jl)",
+      "Bash(rm glacier-code/particleda/plot_*.jl.bak)",
+      "Bash(sed -i.bak 's/ylim=\\(0, 4500\\)/ylim=\\(1000, 3000\\)/g' glacier-code/particleda/plot_particle_tracking.jl glacier-code/particleda/plot_linear_advection.jl)",
+      "WebSearch",
+      "Bash(sed -i.bak 's/ylim=\\(1000, 3000\\)/ylim=\\(500, 3500\\)/g' glacier-code/particleda/plot_particle_tracking.jl glacier-code/particleda/plot_linear_advection.jl)",
+      "Bash(julia --project=test glacier-code/particleda/run_no_obs_linear_adv.jl)",
+      "Bash(julia --project=test glacier-code/particleda/plot_no_obs_linear_adv.jl)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -10,11 +24,6 @@
           }
         ]
       }
-    ]
-  },
-  "permissions": {
-    "allow": [
-      "Bash(julia --project=test -e ' *)"
     ]
   }
 }

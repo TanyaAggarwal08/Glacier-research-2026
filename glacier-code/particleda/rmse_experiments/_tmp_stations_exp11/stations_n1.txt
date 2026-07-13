@@ -1,0 +1,3 @@
+# Auto-generated for experiment_11 (n=1).
+# Columns: x (m), y (m).
+142000.0, 150000.0
