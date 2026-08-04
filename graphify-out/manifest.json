@@ -56,7 +56,7 @@
     "hash": "abf3bc0622db41a0e804d9e897916c4e"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/main.jl": {
-    "mtime": 1777314308.3845277,
+    "mtime": 1783220919.3680496,
     "hash": "828e73472e824f2ed76216c148698787"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/non_linear_advection.jl": {
@@ -78,6 +78,226 @@
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/testing_stage/particlefilteringdiscrete.jl": {
     "mtime": 1777593920.963304,
     "hash": "65cdbfb121928ef6f5a320670131789c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_30obs_logbeta.jl": {
+    "mtime": 1784143943.6775734,
+    "hash": "be1bada20520425b9db59047a37f282b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_linear_advection.jl": {
+    "mtime": 1781126181.5295718,
+    "hash": "d9750fcc6af605078cccd545fdc17ecd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_wendroff_amplitude.jl": {
+    "mtime": 1781737467.8774502,
+    "hash": "4b63e1d1523fe948340526313dfab3c6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_16obs_tempered_logbeta.jl": {
+    "mtime": 1784337779.8858078,
+    "hash": "b6b5bc678ac4e9823991ba9486dc6d41"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_pseudorandom_wave.jl": {
+    "mtime": 1784143943.8833418,
+    "hash": "1e693f9922b4c19fce0d54aeba468e62"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave.jl": {
+    "mtime": 1784092924.7059417,
+    "hash": "2b88fe945f606f4b1b8bbf371515d4b4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_glacier_pda.jl": {
+    "mtime": 1779391658.1569803,
+    "hash": "a31268b28a18fb5ada1f0996ee4c499b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/experiment_18_wavi_obs.jl": {
+    "mtime": 1785777419.0038655,
+    "hash": "c4a95c49f73a1c4bfe811c88a88851eb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_run17_particle_paths.jl": {
+    "mtime": 1784388108.3792124,
+    "hash": "61ef59c31969c5dd902b7d970aeddabc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/ice_flow.jl": {
+    "mtime": 1783222319.2263143,
+    "hash": "68858deba2a2054b11ec4cccef02ad08"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_particle_tracking.jl": {
+    "mtime": 1781126181.527897,
+    "hash": "685b6aa5d6623a75c3a29bd9078d982a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_particle_tracking.jl": {
+    "mtime": 1781126465.07352,
+    "hash": "10b0a41fec1f35d88b5bbd4c00ba5d37"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_30obs_logbeta_noobs_noproc.jl": {
+    "mtime": 1784152178.388871,
+    "hash": "8551251acc9327bc5d08723163d083dc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_30obs.jl": {
+    "mtime": 1784135338.8643682,
+    "hash": "0b84151748a382e18fe8fd2c453e974a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_obs_cadence.jl": {
+    "mtime": 1778884119.0285692,
+    "hash": "664600553d973dd6f87b09973bfdd6cf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_seed_sweep.jl": {
+    "mtime": 1778885610.0899384,
+    "hash": "87d2074ea0ee8979fb395d26439f5032"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_seed_sweep.jl": {
+    "mtime": 1778885602.9651167,
+    "hash": "5aa585e106bf96380ed89d3067a015a1"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/ice_experiment_dynamics.jl": {
+    "mtime": 1785652370.974219,
+    "hash": "d1e7aac98fccbb76dca3715eda9e9cea"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/test_double_bump_velocity.jl": {
+    "mtime": 1785777333.5869803,
+    "hash": "7b8f314600618c8dedcdb051b5e48c54"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_exp18_field_evolution.jl": {
+    "mtime": 1785122925.0741332,
+    "hash": "c8e9ad7d51b8b86689ab332af1404df4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_obs_cadence.jl": {
+    "mtime": 1778884109.0958574,
+    "hash": "ec8011d7e5f2f35f57f95612c9549284"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_16obs_logbeta.jl": {
+    "mtime": 1784240177.5865247,
+    "hash": "55ab688f7397b71636ed27ea73a8e9f6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_obs_vs_no_obs.jl": {
+    "mtime": 1779833902.785381,
+    "hash": "6d8e5de3832d7de558382c1f5f6eb5c8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_obs_vs_no_obs.jl": {
+    "mtime": 1779737408.7097876,
+    "hash": "238c0f004caee1d99884091263782954"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_pseudorandom_wave_30obs_noobs.jl": {
+    "mtime": 1784136459.937614,
+    "hash": "782da098c1d4319ff7aea5aee1e9c307"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_exp18_velocity_rmse.jl": {
+    "mtime": 1785122918.2365239,
+    "hash": "9c4f49e9bb9a41f21536403091ab09a5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_no_obs_linear_adv.jl": {
+    "mtime": 1781127124.4429717,
+    "hash": "6ad7b1d7048f8b09551b9b123fcabb3b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/plot_no_obs_linear_adv.jl": {
+    "mtime": 1781127152.9198139,
+    "hash": "3ae89668b70ee965f0856dd8c5aba2e6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_linear_advection.jl": {
+    "mtime": 1781126457.2294269,
+    "hash": "521b82042ca48e40e82fa065d954eef3"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_glacier_pda.jl": {
+    "mtime": 1779304849.5125053,
+    "hash": "f344994457fb1b494b69ffd1e990623d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/run_wendroff_amplitude.jl": {
+    "mtime": 1781739328.4031804,
+    "hash": "c49f7b002df2f9687a9bf8e87843f990"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/glacier_model.jl": {
+    "mtime": 1784143974.7355545,
+    "hash": "d4e92235f0e8ef3847777b755231e085"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/diagnose_16_bracketing.jl": {
+    "mtime": 1784238131.486255,
+    "hash": "40a9aed11610416a3fa7bd595f5fc49e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_05_length_scale_sweep.jl": {
+    "mtime": 1781805473.7371435,
+    "hash": "83ac662c77177302a714f32854cdf7ea"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_helpers.jl": {
+    "mtime": 1784075234.049828,
+    "hash": "dc6ef92e4872e3563f5c1aab74c57f26"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_08b_obs_cadence_sweep_seed2.jl": {
+    "mtime": 1782587452.1044583,
+    "hash": "39bd93f274ff9f5f2dbfb00fa0f29f95"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_09_velocity_rmse_post.jl": {
+    "mtime": 1783223447.6790626,
+    "hash": "c6635165b4009cc9cae0b83995acb42a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_10_n_obs_sweep_no_procnoise.jl": {
+    "mtime": 1783381408.9833317,
+    "hash": "d384f093bc7f97fddf46ffe06d029f51"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_04_sigma_init_sweep.jl": {
+    "mtime": 1781742646.753298,
+    "hash": "a95f0f96cad1687f5164962c1c8a9ae6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_09_velocity_rmse_pf.jl": {
+    "mtime": 1783223418.724077,
+    "hash": "a74c8dbfa38206207f5cf42ffd59df07"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/diagnose_14_log_obs_calibration.jl": {
+    "mtime": 1784145662.0771127,
+    "hash": "6a3726a7ff0881e6d4aad1aed4d42ea2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_01_linear_vs_nonlinear.jl": {
+    "mtime": 1781592664.1235018,
+    "hash": "2ab97a12239728482f65e3120506bcdd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_08_obs_cadence_sweep.jl": {
+    "mtime": 1782501961.9263363,
+    "hash": "11b1394182422194f2120666a43c679a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_11_n_obs_sweep_lw_no_procnoise.jl": {
+    "mtime": 1783384010.6203868,
+    "hash": "8165daa13d882c67112c1d646bd611d7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_14_logbeta_sigma_health.jl": {
+    "mtime": 1784146478.4759445,
+    "hash": "b2e5a530c1eaf839990f24301371c75f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_17_tempering.jl": {
+    "mtime": 1784249944.9293427,
+    "hash": "5b2b9c7fb2a1be8d1b71acd0a4576e58"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_09_velocity_comparison.jl": {
+    "mtime": 1783361159.3684144,
+    "hash": "4a492ead4dc00f87b160b936bdb39947"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_02_cfl_and_laxwendroff.jl": {
+    "mtime": 1781717839.164718,
+    "hash": "baa9a088da9fd4051197a29906024704"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_03_sigma_obs_sweep.jl": {
+    "mtime": 1781741764.507037,
+    "hash": "155121ea54982bbbf5dac8e67eb67fbb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_12_n_obs_sweep_lw.jl": {
+    "mtime": 1783916768.1957808,
+    "hash": "eb333ccff6d5252afa186281568db9b1"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_15_seed_sweep_operator_comparison.jl": {
+    "mtime": 1784151458.345902,
+    "hash": "d39ec143fbadf56253be8f0cbf04f04f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_16_init_spread_fix.jl": {
+    "mtime": 1784233713.7402208,
+    "hash": "3a0e194e3712005cf706bb0a971bf31b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_07b_n_obs_sweep_seed2.jl": {
+    "mtime": 1782499129.2274082,
+    "hash": "67e0f75bde99f1314dae90189627d4a8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_06_sigma_proc_sweep.jl": {
+    "mtime": 1781809096.1644285,
+    "hash": "0f4ecd0a1b71c3047c0e779303c092ce"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/experiment_13_log_obs_sigma_sweep.jl": {
+    "mtime": 1784143294.9420907,
+    "hash": "ba50ac3ea7af7193db24fd7870a35825"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/bootstrap-pf-experiments/code/benchmark_sweep.jl": {
     "mtime": 1778643321.5938737,
@@ -128,8 +348,8 @@
     "hash": "e33666477aa7b0008782ca2f7f0a53f9"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/README.md": {
-    "mtime": 1778431903.8157344,
-    "hash": "f7c7247c57b6772a154c5fead07f339a"
+    "mtime": 1779392984.0374267,
+    "hash": "b8ea928c0114e2e0734407088710d3d3"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/CLAUDE.md": {
     "mtime": 1778649779.3540165,
@@ -143,13 +363,117 @@
     "mtime": 1778621679.260778,
     "hash": "fc1bc2d610e2da0e257cb73d949f0ac0"
   },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/21_numerical_diffusion.md": {
+    "mtime": 1781593864.4797273,
+    "hash": "c9ef7223d2750a74ca7edc879b1e6a37"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/06_seed_sweep_robustness.md": {
+    "mtime": 1778800559.8328247,
+    "hash": "8916e4272b51cf8b842858480575e0c8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/11_compute_cost_comparison.md": {
+    "mtime": 1779300859.479494,
+    "hash": "15d65045531d43e14c0fdb346aca931a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/parameters.md": {
+    "mtime": 1778989668.7800958,
+    "hash": "9407d728992e6ea5978af5057b496f57"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/20_particle_visualization.md": {
+    "mtime": 1780357132.3417473,
+    "hash": "5f6f5d685706a92020f1a509b9ca0746"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/04_code_maps.md": {
+    "mtime": 1778691844.2152312,
+    "hash": "29f0080d2eab3db370eacea49f8aa937"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/18_smooth_noise_hourly_cadence.md": {
+    "mtime": 1779737825.0775378,
+    "hash": "0ec14d4c094a6e86e4986f13c5a59979"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/14_conceptual_faq.md": {
+    "mtime": 1779315955.9601803,
+    "hash": "9ce2a6351c69982f5e689c97a3bcf737"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/22_lw_rpf_reference.md": {
+    "mtime": 1781806957.8429546,
+    "hash": "99b652110ded1968da77d9d3b4e090cc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/26_wavi_observation_operator.md": {
+    "mtime": 1784561234.2582364,
+    "hash": "a929498d2bb604209a8e5ceb28b8b945"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/23_ice_flow_integration.md": {
+    "mtime": 1783224021.4117167,
+    "hash": "da94e2a2be3d4e54bd82c6e0d58e5110"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/15_observations_ablation.md": {
+    "mtime": 1779394285.8635695,
+    "hash": "3499c31eb2bc4cd72d75ab9d0760da57"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/rmse_experiment_log.md": {
+    "mtime": 1784077717.9865901,
+    "hash": "b67e5b9dcc691b766e750e78015b332f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/19_noise_pipeline_deepdive.md": {
+    "mtime": 1779902812.3926752,
+    "hash": "9afcccdcfda65a4dbd8da0ff275d7804"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/16_beta_space_state.md": {
+    "mtime": 1779477642.09447,
+    "hash": "c216670b96e574187bee1131f52b8354"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/05_particleda_vs_lowlevel_comparison.md": {
+    "mtime": 1778798870.7653193,
+    "hash": "f76ca33d14259e6c073b0f75a09a1029"
+  },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/03_decision_use_particleda.md": {
     "mtime": 1778621679.2699459,
     "hash": "33e285c144ac55e14342232aeb9785f2"
   },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/12_random_sensor_placement.md": {
+    "mtime": 1779305085.5292206,
+    "hash": "1afcf22c472068b20f716d42a00c1b8a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/13_observation_noise.md": {
+    "mtime": 1779305888.536895,
+    "hash": "ec7c82654f2d0ad354e510a144cbfed8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/07_observation_cadence.md": {
+    "mtime": 1778884269.3023314,
+    "hash": "2c64d119259d44f926782fc31cabe1f1"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/24_pseudorandom_wave_run.md": {
+    "mtime": 1784095126.4501271,
+    "hash": "bbe25ce428bbb43bcf84b735bd1f02ef"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/27_wavi_seed2_replicate.md": {
+    "mtime": 1785134989.675728,
+    "hash": "5b604b12fc1f12a38916e957cc7a4fe6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/08_seed_sweep_v2.md": {
+    "mtime": 1778885765.648897,
+    "hash": "a0301fa5cbcc81b354ef141a91ea1a35"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/10_one_step_advection.md": {
+    "mtime": 1779299951.9560506,
+    "hash": "311696919b432e8f098fe27d59f74cb0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/25_observation_error_analysis.md": {
+    "mtime": 1784146301.4588332,
+    "hash": "d026fd422552ab8d2673cd0fa91085dd"
+  },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/00_action_plan.md": {
     "mtime": 1778621679.258694,
     "hash": "5d8df4a6fecf6324c69fb65ff58153a4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/09_dt_and_cfl_handling.md": {
+    "mtime": 1779163672.6589065,
+    "hash": "6b79b456ef7ebfe2affd76b429accc89"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/17_full_audit.md": {
+    "mtime": 1779597331.2790344,
+    "hash": "f4f2ea04e8c2e8f134720f46fc6b0322"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-notes/02_particleda_mpi_explanation.md": {
     "mtime": 1778621679.262725,
@@ -206,6 +530,166 @@
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/README.md": {
     "mtime": 1777409557.8223982,
     "hash": "655111f37e67320dce408e988b55e47e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/stations_random_16.txt": {
+    "mtime": 1779393115.4820373,
+    "hash": "0c05905683368c5c5c855320debe6e63"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/glacier.yaml": {
+    "mtime": 1779737391.3280075,
+    "hash": "10b26f42dc48e91222d88f4f9f152703"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/stations_grid_16.txt": {
+    "mtime": 1784240138.1794715,
+    "hash": "e42a144ef19ac545a72efe1b74737e01"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/stations_crosssection_30.txt": {
+    "mtime": 1784135292.799012,
+    "hash": "0408a780f1bde8ddc03839662ebd4bce"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/glacier_no_obs.yaml": {
+    "mtime": 1779737403.6646717,
+    "hash": "999495fbde1097f4f82baed74c6a1577"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/stations_crosssection.txt": {
+    "mtime": 1780467971.9872766,
+    "hash": "78ecf17916d4a3720fef377c81ecd879"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/glacier_random.yaml": {
+    "mtime": 1779737398.436003,
+    "hash": "d0f4115d88f0d454126a184e9a3fd074"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/WORKFLOW.md": {
+    "mtime": 1779392553.5322409,
+    "hash": "d2ce5ae83e64112c8503aac82b45991d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/README.md": {
+    "mtime": 1784095132.8912961,
+    "hash": "cee4379a070b5936a5b7d8b9f30d9aa5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/glacier_obs_baseline.yaml": {
+    "mtime": 1779737490.8871505,
+    "hash": "32bbb9864f8a2ecfc237031a84819a57"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n50.txt": {
+    "mtime": 1782499917.0731962,
+    "hash": "1cd8b76ae292993d666962e7c5bf5cdd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n25.txt": {
+    "mtime": 1782499783.2050233,
+    "hash": "1da11e11e2b957366395cddfa9b9185a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n10.txt": {
+    "mtime": 1782499638.4282901,
+    "hash": "da44c70546c194eb798261131ff1bbff"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n1.txt": {
+    "mtime": 1782499348.291128,
+    "hash": "c150d8476520b9293f97f77a52f07add"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n0.txt": {
+    "mtime": 1782499103.6914349,
+    "hash": "8c71543d3822d7e668b53100f61541ab"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07b/stations_n5.txt": {
+    "mtime": 1782499494.6728032,
+    "hash": "e9fe4d4cac40867215648c45191859f4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp11/stations_n50.txt": {
+    "mtime": 1783384190.2605872,
+    "hash": "54caf23d4bfc0485130a06db0b1045b2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp11/stations_n25.txt": {
+    "mtime": 1783384172.9603677,
+    "hash": "08e6ecd7659f576f1ceaf57d702704bb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp11/stations_n10.txt": {
+    "mtime": 1783384155.5317867,
+    "hash": "1532d652eb036dc01209d0ff0a8a7c6e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp11/stations_n1.txt": {
+    "mtime": 1783384121.6017373,
+    "hash": "805c42d8f7f85e224f2719e0e6da1087"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp11/stations_n5.txt": {
+    "mtime": 1783384138.8347023,
+    "hash": "6db9ee24b75a88194fa22d0f18ed1cb7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp10/stations_n50.txt": {
+    "mtime": 1783381792.2960026,
+    "hash": "10bc0f8503517ba5419edce32d8363cb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp10/stations_n25.txt": {
+    "mtime": 1783381780.9194455,
+    "hash": "f27319fdc01491a9104b0906dba25229"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp10/stations_n10.txt": {
+    "mtime": 1783381769.5999832,
+    "hash": "c808364413f25f78a97952ae42b7eca2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp10/stations_n1.txt": {
+    "mtime": 1783381745.8250232,
+    "hash": "8d368a610254a3387505f4a64bfbc50b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp10/stations_n5.txt": {
+    "mtime": 1783381757.1802933,
+    "hash": "500925333f2448c40c1731266d397bd6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n50.txt": {
+    "mtime": 1782497870.824476,
+    "hash": "4cef7ebba7e826aa74633131db6948d7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n25.txt": {
+    "mtime": 1782497737.3003151,
+    "hash": "2f8f37a0285c5c78d46fa0a878fb1128"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n10.txt": {
+    "mtime": 1782497581.5635319,
+    "hash": "c1b8ea5daeae2adc66c335f0a09c7e4d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n1.txt": {
+    "mtime": 1782497301.9886303,
+    "hash": "541fbebce8f73370c0eed02e0cd7a283"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n0.txt": {
+    "mtime": 1782497152.6598108,
+    "hash": "f5fd1c1f3627c01720f36b9cf6d33efc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp07/stations_n5.txt": {
+    "mtime": 1782497435.262996,
+    "hash": "5e16705492bc5f1e632c320db03a0085"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp12/stations_n50.txt": {
+    "mtime": 1784077256.5132003,
+    "hash": "7bba2cec07fc9d0eb655d9026bfd2025"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp12/stations_n25.txt": {
+    "mtime": 1784076802.454311,
+    "hash": "7a1c0e98cad12b0d859d6cfab03f4f66"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp12/stations_n10.txt": {
+    "mtime": 1784076347.280125,
+    "hash": "bac0e651ce6e0003aeab5b70d7a57bec"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp12/stations_n1.txt": {
+    "mtime": 1784075690.3206854,
+    "hash": "2fffd69492676dca0929ac1a61e766a3"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp12/stations_n5.txt": {
+    "mtime": 1784075962.8315897,
+    "hash": "a97aadd7989d4cbc5c5be40acc61773e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/rmse_experiments/_tmp_stations_exp13/stations_n25.txt": {
+    "mtime": 1784143314.7261095,
+    "hash": "620527e99cd31e6271b2f99d89b64365"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/run04_every1c/glacier.yaml": {
+    "mtime": 1778884128.9415119,
+    "hash": "0c0321cf8157a389ca422b040b6da17b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/run05_every2c/glacier.yaml": {
+    "mtime": 1778884149.961672,
+    "hash": "41f4199db1ffb07773f7de292fd44f14"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/bootstrap-pf-experiments/code/benchmark.yaml": {
     "mtime": 1778643239.7733324,
@@ -294,6 +778,854 @@
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/results/quasilinear_advection.gif": {
     "mtime": 1777316500.6691344,
     "hash": "44ddf1179069bf498e7d40fbea623ddf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/true_beta_obs_anim.gif": {
+    "mtime": 1784144629.8072257,
+    "hash": "0327feab4b7f6b716bb0c5ba2c130324"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/rmse_beta_compare_vs_run15_noobs_noproc.png": {
+    "mtime": 1784152254.4315908,
+    "hash": "d8c1d6fdf07976a3c7d8cb4d60878081"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/rmse_beta_compare_vs_run12.png": {
+    "mtime": 1784144751.4633014,
+    "hash": "586f387779c7e54a6daafaff6afcbadf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/sensor_trail_anim.gif": {
+    "mtime": 1784144748.8208416,
+    "hash": "11a5e602509a6de647bd51b80352d636"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/rmse_beta_compare_vs_run11.png": {
+    "mtime": 1784144751.43194,
+    "hash": "3c165dc161274ed2c357a42ef5101fc0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/ess_tracking.png": {
+    "mtime": 1784144750.8793032,
+    "hash": "e5a7e513dee04b704eba3b3329c84eb4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/est_beta_obs_anim.gif": {
+    "mtime": 1784144634.5185235,
+    "hash": "d3f28677e86a3e8aa3dda685c440b997"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/sensor_trail.png": {
+    "mtime": 1784144750.5098324,
+    "hash": "977d45559d8794ce9d1a4ba227155b3e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/rmse_beta.png": {
+    "mtime": 1784144751.1265423,
+    "hash": "c77560a6f3cbf7f0d38ab85afd57bae5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/crosssection_anim.gif": {
+    "mtime": 1784144642.0539412,
+    "hash": "160b1bbf8c472b06c7fec33dac25df27"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/prior_pair.png": {
+    "mtime": 1784144624.1311212,
+    "hash": "18c9187206e8ea989d7ca06872c6e4e9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run14_pseudorandom_wave_30obs_logbeta/crosssection_final.png": {
+    "mtime": 1784144642.1624994,
+    "hash": "217a476e459cb4cab8187f44a99bdfa4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run10_wendroff_amplitude/sensor_trail_anim_ux.gif": {
+    "mtime": 1781739802.2699444,
+    "hash": "2d15a55583e7ecced626478f5fa68259"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run10_wendroff_amplitude/sensor_trail_anim.gif": {
+    "mtime": 1781739740.065968,
+    "hash": "d2b3f821c5cedf3b2e8179de5be4570c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run10_wendroff_amplitude/ess_tracking.png": {
+    "mtime": 1781739802.5125022,
+    "hash": "8a2fc231c33bde942cf4427bc630f1fe"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run10_wendroff_amplitude/crosssection_anim_all_particles.gif": {
+    "mtime": 1781739666.0724342,
+    "hash": "3a137db23a0ad606fa297183b871da72"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run10_wendroff_amplitude/crosssection_anim.gif": {
+    "mtime": 1781739601.800789,
+    "hash": "b608ff9a70ac248b9cebe34940a1f1e3"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/velocity_rmse_abs.png": {
+    "mtime": 1784560969.8391933,
+    "hash": "d60417c7af8af12f0b9a7700a76672e2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/velocity_field_truth_vs_mean.png": {
+    "mtime": 1785122437.63915,
+    "hash": "bcd96aa999e56bd01cc3cfa2fc69c470"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/beta_field_truth_vs_mean.png": {
+    "mtime": 1785122437.59825,
+    "hash": "5f90625de8d9677c3d20a490e61efc5f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/velocity_rmse_rel.png": {
+    "mtime": 1784560969.9068124,
+    "hash": "e5c08372a973fdba4d04298e1cbca55b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/ess_tracking.png": {
+    "mtime": 1784533770.721578,
+    "hash": "7acc3525ce221141e1e9bcc36221bb8c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/sensor_trail.png": {
+    "mtime": 1784533772.5354817,
+    "hash": "63bab0c02f1d222385a2c5949b6db014"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/rmse_beta.png": {
+    "mtime": 1784533770.7633514,
+    "hash": "44dee18540b31aabf77c1f1c573b543d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/crosssection_final.png": {
+    "mtime": 1784533772.2981021,
+    "hash": "fe3684b3f155f8f6edad9a858ef91d71"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs/obs_fit.png": {
+    "mtime": 1784533772.611879,
+    "hash": "06d3053192eeaad90ce677fcd8a44e16"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/ess_evolution.png": {
+    "mtime": 1778798788.6551268,
+    "hash": "598e20627f030f41e0a4755ffd11b4fd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/particle_variance.png": {
+    "mtime": 1778798788.657282,
+    "hash": "3f6b3ea46be0f537c693194eb5a2d803"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/beta_pointwise.png": {
+    "mtime": 1778798788.6538508,
+    "hash": "451c80db9be667fe986c080c368cf564"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/max_weight.png": {
+    "mtime": 1778798788.6567554,
+    "hash": "5e69907950c0a2d9b288da62bf57b266"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/true_beta.gif": {
+    "mtime": 1778798788.6529584,
+    "hash": "d1f7af48ee140d843aa529b68f6eef17"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/final_beta_error.png": {
+    "mtime": 1778798788.6561322,
+    "hash": "43c9e69015428332e9c8bb001ab9181c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/weight_entropy.png": {
+    "mtime": 1778798788.660399,
+    "hash": "edee1fae777946c97d94996e5295c491"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/rmse_vel.png": {
+    "mtime": 1778798788.6588268,
+    "hash": "499fab2a3e6be6c5fc74bb9b2a92b353"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run02_wide_prior_100obs/rmse_beta.png": {
+    "mtime": 1778798788.6582522,
+    "hash": "ba5267e06d95e6ffd6ea69cc0120882a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run17_pseudorandom_wave_16obs_tempered_logbeta/crosssection_anim_particles.gif": {
+    "mtime": 1784393837.0102055,
+    "hash": "b09fd824831da3bcb71f605178e2123f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run17_pseudorandom_wave_16obs_tempered_logbeta/crosssection_final_tempered.png": {
+    "mtime": 1784338110.1273263,
+    "hash": "954b11c3b5226b421611af59001a9a1d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run17_pseudorandom_wave_16obs_tempered_logbeta/crosssection_final_particles.png": {
+    "mtime": 1784393803.505203,
+    "hash": "89de0f998a9448a56ee007f96d56476d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run17_pseudorandom_wave_16obs_tempered_logbeta/crosssection_anim_tempered.gif": {
+    "mtime": 1784338115.8505225,
+    "hash": "4dba12bcea2044cad81c048a6f929510"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run17_pseudorandom_wave_16obs_tempered_logbeta/ess_tracking.png": {
+    "mtime": 1784338117.5173428,
+    "hash": "a435d4e6d2bbe896da984b3eb2e9fff7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run08_linear_advection_run/sensor_trail_anim.gif": {
+    "mtime": 1781126647.4649322,
+    "hash": "bbf946d4bc713abafdd22d2f5df44383"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run08_linear_advection_run/ess_tracking.png": {
+    "mtime": 1781126647.5439918,
+    "hash": "7064bd0db23b7002763c13e3cfdb29cb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run08_linear_advection_run/crosssection_anim_all_particles.gif": {
+    "mtime": 1781126598.0948448,
+    "hash": "39fd89ac6bc3460ee8c9b6ff478a4c30"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run08_linear_advection_run/crosssection_anim.gif": {
+    "mtime": 1781126544.9751663,
+    "hash": "46dbafe959857b1d76fc7c175393bbe7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/min_ess_tempering_by_seed_exp17.png": {
+    "mtime": 1784254233.9742684,
+    "hash": "ebb3b64a49436642d119214f9bbfd237"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_sigma_obs_sweep_exp03.png": {
+    "mtime": 1781742369.5777187,
+    "hash": "5b5ce91e3ac694fad729944176709602"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_sigma_init_sweep_exp04.png": {
+    "mtime": 1781743216.6031106,
+    "hash": "0a907898c4ef5e92fef66b048ce6c49b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_sigma_proc_sweep_exp06.png": {
+    "mtime": 1781809891.7247324,
+    "hash": "2df2f6a8be9e157922c964d9fe7dcf4b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/exp09_velocity_rmse.png": {
+    "mtime": 1783223825.8217125,
+    "hash": "cb04876c5e06237f6d994ef3c8bbfbaf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_obs_cadence_sweep_exp08.png": {
+    "mtime": 1782504019.9829977,
+    "hash": "d97c992ff5cd901b59fa1ad7245c292a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_n_obs_sweep_lw_no_procnoise_exp11.png": {
+    "mtime": 1783384207.5692635,
+    "hash": "b200fdce4d21410a9bfc042431af7b68"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/ess_tempering_exp17.png": {
+    "mtime": 1784254233.7758849,
+    "hash": "789351f5a2e0a0878745b5c0c19370ca"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/s_obs_vs_sigma_run14.png": {
+    "mtime": 1784145678.3415973,
+    "hash": "cefd6d53c95b94ab307ebfdb155034f9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/ess_trace_run14_logbeta.png": {
+    "mtime": 1784145678.019739,
+    "hash": "e18829a1e21e6928f62746f99828d7b8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_obs_cadence_sweep_exp08b_seed2.png": {
+    "mtime": 1782712736.195001,
+    "hash": "aaa509c56b76385d847e968682756cca"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_logbeta_sigma_sweep_exp14.png": {
+    "mtime": 1784147409.8345723,
+    "hash": "735ac1540c1a02dd38ea0661b24bf173"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_vs_init_std_exp16.png": {
+    "mtime": 1784238055.1821787,
+    "hash": "29eb1c15797465c6e23400bdc52ab830"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_length_scale_sweep_exp05.png": {
+    "mtime": 1781806596.0919495,
+    "hash": "8962c0c2511f1fe15ea40ab2548e87a9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_n_obs_sweep_exp07b_seed2.png": {
+    "mtime": 1782500066.205426,
+    "hash": "a1a148bf29c0a471348b7d5a83283975"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/paired_diff_operator_exp15.png": {
+    "mtime": 1784155507.7049406,
+    "hash": "05d702a452248c6b60e00adc4bb2ccba"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/amplitude_vs_time_exp02.png": {
+    "mtime": 1781718389.9568262,
+    "hash": "962c5f0dde8f7f5ecfbb3c2c66dd51db"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_n_obs_sweep_exp07.png": {
+    "mtime": 1782498007.8206513,
+    "hash": "f572f7b19c9f1dd2ea21e76dcc47acbb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/ess_logbeta_sigma_sweep_exp14.png": {
+    "mtime": 1784147409.7154698,
+    "hash": "8cb76ffbc1a1ec7658a5e0861d3049bf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_linear_vs_nonlinear_exp01.png": {
+    "mtime": 1781593300.8790708,
+    "hash": "56089b313bf53ae45bcfda2605185179"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/min_ess_vs_init_std_exp16.png": {
+    "mtime": 1784238054.706366,
+    "hash": "d07c6da4f8fd8a391663a3edacd5386e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_n_obs_sweep_lw_exp12.png": {
+    "mtime": 1784077716.3050075,
+    "hash": "9836d2bc65b73f2ee4792d9dde79fb7d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_n_obs_sweep_no_procnoise_exp10.png": {
+    "mtime": 1783381804.801686,
+    "hash": "95435b7b01173ee4f11b4606a99e567e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/rmse_analysis/rmse_seed_sweep_operator_exp15.png": {
+    "mtime": 1784155506.9348204,
+    "hash": "6527907d410b30e9dba9991246dd6974"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/beta_pointwise_normalised.png": {
+    "mtime": 1779476057.5647922,
+    "hash": "9e0b5d4028e377635810619e3a53d03b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/ess_evolution.png": {
+    "mtime": 1779476057.5652509,
+    "hash": "d3689b9717b18c5b5ef8ecab2215cb23"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/particle_variance.png": {
+    "mtime": 1779476057.566981,
+    "hash": "e16134b718b3bc211828237998bf5d17"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/beta_multi_point_normalised.png": {
+    "mtime": 1779476057.56333,
+    "hash": "a9c0e38133ef780a7718379e7aa5b08d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/beta_pointwise.png": {
+    "mtime": 1779476057.563755,
+    "hash": "2173001b44cabd315bb9099920df77df"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/weight_variance.png": {
+    "mtime": 1779476057.5698857,
+    "hash": "6a31accb61f7721e73392f8f4cfc43df"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/beta_multi_point.png": {
+    "mtime": 1779476057.5629008,
+    "hash": "2f53669d9ba8c25264456967c7a37d4d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/max_weight.png": {
+    "mtime": 1779476057.5665774,
+    "hash": "6a8df121ca6f539ec8a47be41228f036"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/true_beta.gif": {
+    "mtime": 1779476057.5622842,
+    "hash": "0543c90b01dd2f310692d7b6bd17fa93"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/final_beta_error.png": {
+    "mtime": 1779476057.565688,
+    "hash": "fae044ec1c457e615bab24ffc7ffd8b8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/ux_first_sensor.png": {
+    "mtime": 1779476057.5686235,
+    "hash": "1626e685f6aa317648458053eca98aa5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/snapshots_collage.png": {
+    "mtime": 1779476057.5681634,
+    "hash": "3f0060b130482f092620be26f2c2306d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/weight_entropy.png": {
+    "mtime": 1779476057.5690367,
+    "hash": "cde21091736b32f7d966951f69e71220"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/rmse_vel.png": {
+    "mtime": 1779476057.5677748,
+    "hash": "b613100ea77dfcc847323308a4e10577"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/rmse_beta.png": {
+    "mtime": 1779476057.5673687,
+    "hash": "3ebd01bd981190dd6d7d48a4e050a920"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/error_beta.gif": {
+    "mtime": 1779476057.557591,
+    "hash": "c329e1a61f5f8e03188bf3ea1e0bd2e0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/est_beta.gif": {
+    "mtime": 1779476057.5591376,
+    "hash": "ff76910cb92f046f80400a5c0d1b9a9e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_beta_space_canonical/weight_extremes.png": {
+    "mtime": 1779476057.5694802,
+    "hash": "5a4bbcbe03ede2513ee5f42977ab9ad7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/true_beta_obs_anim.gif": {
+    "mtime": 1784136692.8305686,
+    "hash": "17a378983a3e357beb7ca38b01f4009c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/rmse_beta_compare_vs_run12.png": {
+    "mtime": 1784136805.0845575,
+    "hash": "b5a80b7f997161f38a7fb9b20ad75082"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/sensor_trail_anim.gif": {
+    "mtime": 1784136802.231035,
+    "hash": "d1f8c1f0ca6ca775f93c8a3364c9c816"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/rmse_beta_compare_vs_run11.png": {
+    "mtime": 1784136805.0500643,
+    "hash": "0f1695b1daaabe240e52a1ad999559ed"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/ess_tracking.png": {
+    "mtime": 1784136804.361352,
+    "hash": "5d02e714117e3ecfd7b4c12bd431aa33"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/est_beta_obs_anim.gif": {
+    "mtime": 1784136697.7825007,
+    "hash": "063cf5bfa92dee4e26b5450d64a6cfb4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/sensor_trail.png": {
+    "mtime": 1784136803.9316804,
+    "hash": "8d05ffd586fc9f680b7cff7bd06aff7e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/rmse_beta.png": {
+    "mtime": 1784136804.6474288,
+    "hash": "35e7fc1960c55469a76b8fce390e8c5b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/crosssection_anim.gif": {
+    "mtime": 1784136707.9574635,
+    "hash": "22bd6070b276fffb115c2525c3cabb9b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/prior_pair.png": {
+    "mtime": 1784136686.4316535,
+    "hash": "18c9187206e8ea989d7ca06872c6e4e9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run13_pseudorandom_wave_30obs_noobs/crosssection_final.png": {
+    "mtime": 1784136708.064476,
+    "hash": "ea73863f5166f337e7780d18de33969b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/variance_cadence.png": {
+    "mtime": 1778884166.1296227,
+    "hash": "2dec64b1ee63975faee0db80991c7f5b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/ess_cadence.png": {
+    "mtime": 1778884165.1101394,
+    "hash": "5e896d9f5d0030e4fc979b6893f63f28"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/rmse_cadence.png": {
+    "mtime": 1778884166.0910325,
+    "hash": "551f77a464b5b7fd30e1da298a40fa12"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/obs_cadence/maxweight_cadence.png": {
+    "mtime": 1778884165.160844,
+    "hash": "940ec068a87d7f1462c9cefb55360fca"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/spaghetti_probe_cells.png": {
+    "mtime": 1781118345.809776,
+    "hash": "8c371ffeb3a73a0265624e14ac9e87bc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/weight_evolution.png": {
+    "mtime": 1781118346.716939,
+    "hash": "05b9055f56ef0627df191cf8f9e4b341"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/sensor_trail_anim.gif": {
+    "mtime": 1781118343.4396417,
+    "hash": "cd1682dedbc88468aa020e88792328ed"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/particle_snapshots.png": {
+    "mtime": 1781118346.4578004,
+    "hash": "ed29b1164b74e859dc85c3427bd41baf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/ess_tracking.png": {
+    "mtime": 1781118346.772762,
+    "hash": "e4a4983315992c131d666f2247e181e3"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/crosssection_anim_all_particles.gif": {
+    "mtime": 1781118285.870865,
+    "hash": "bdbc3a5c2a2a22668c42fb5981c27294"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/crosssection_anim.gif": {
+    "mtime": 1781118238.6459277,
+    "hash": "e37485c3e87331406cc5354f665f89c2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run07_particle_tracking/crosssection_final.png": {
+    "mtime": 1781118285.952511,
+    "hash": "70a78806fa70dc2cf3218e0d7bcc8c1a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/velocity_rmse_abs.png": {
+    "mtime": 1785783175.9220834,
+    "hash": "83742ad4d21c5752cbed3526354e4cd2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/velocity_field_truth_vs_mean.png": {
+    "mtime": 1785783225.005999,
+    "hash": "7c544ccb675c97d4a7407dfbbcb7779f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/beta_field_truth_vs_mean.png": {
+    "mtime": 1785783224.9249635,
+    "hash": "5cc51ae824838562336bdec1ab12a796"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/velocity_rmse_rel.png": {
+    "mtime": 1785783175.9672348,
+    "hash": "a5449ebc2ebab923e4bde960aa6025dd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/ess_tracking.png": {
+    "mtime": 1785783148.5475419,
+    "hash": "9c292f53f2300635fdff7bca945068da"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/sensor_trail.png": {
+    "mtime": 1785783150.7372682,
+    "hash": "1cff502b95debf9f0c3974df95137db4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/rmse_beta.png": {
+    "mtime": 1785783148.6001167,
+    "hash": "be1665870fe1845b1bbbcf6f4b2075ea"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/crosssection_final.png": {
+    "mtime": 1785783150.4757552,
+    "hash": "aea66393703156d7ae691495c0ea0dd9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump/obs_fit.png": {
+    "mtime": 1785783150.84807,
+    "hash": "61958c8532d8994675e090f085a8a213"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run09_no_obs_linear_adv/sensor_trail_anim.gif": {
+    "mtime": 1781127350.884304,
+    "hash": "79cdb2b7cb4fdd82132a39dd4589821f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run09_no_obs_linear_adv/ess_tracking.png": {
+    "mtime": 1781127350.9625926,
+    "hash": "653bf9da04a5532f35d763a286825bbf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run09_no_obs_linear_adv/crosssection_anim_all_particles.gif": {
+    "mtime": 1781127291.5799708,
+    "hash": "ab6b88a3c0e71d66808b439f38fe152f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run09_no_obs_linear_adv/crosssection_anim.gif": {
+    "mtime": 1781127236.3291924,
+    "hash": "8b5e648419ab89bd5661b2c431a8efa5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/true_beta_obs_anim.gif": {
+    "mtime": 1784135782.8250897,
+    "hash": "286106e17d379442aa074f3fd670b8d0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/sensor_trail_anim.gif": {
+    "mtime": 1784135902.8170624,
+    "hash": "f41c94f88c6db3acba03c2fcde75edd0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/rmse_beta_compare_vs_run11.png": {
+    "mtime": 1784135905.8854945,
+    "hash": "9d01d9b7a585fd9a7d9587287265d49d"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/ess_tracking.png": {
+    "mtime": 1784135905.3864403,
+    "hash": "0a34c1533828c8e4d934425789699f6b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/est_beta_obs_anim.gif": {
+    "mtime": 1784135788.3410141,
+    "hash": "55a1e73e4fa39aca372f6e3da7c9e83a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/sensor_trail.png": {
+    "mtime": 1784135904.9700735,
+    "hash": "2112ae4bc029f4906c4000460264b98f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/rmse_beta.png": {
+    "mtime": 1784135905.6858,
+    "hash": "f637f7a5906e088d933f45153bc537e9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/crosssection_anim.gif": {
+    "mtime": 1784135796.2598476,
+    "hash": "dab4dbf00331f35f735365d1f3f4afeb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/prior_pair.png": {
+    "mtime": 1784135777.1052604,
+    "hash": "18c9187206e8ea989d7ca06872c6e4e9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run12_pseudorandom_wave_30obs/crosssection_final.png": {
+    "mtime": 1784135796.3860328,
+    "hash": "6f08d6f151c3c95609f9f46e870db7fb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/beta_pointwise_normalised.png": {
+    "mtime": 1779391698.2241502,
+    "hash": "4c3ece781b50171bb4b325f08c82a9e8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/ess_evolution.png": {
+    "mtime": 1779391698.6443663,
+    "hash": "dfb7e8f9e9d045910e9935321f296cdd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/particle_variance.png": {
+    "mtime": 1779391698.846259,
+    "hash": "cf82c639459e02874790835677c2791b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/beta_multi_point_normalised.png": {
+    "mtime": 1779391698.434424,
+    "hash": "0b25b76a77047459df92c6cc753e1360"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/beta_pointwise.png": {
+    "mtime": 1779391698.1001244,
+    "hash": "242a15f4b439f30a899ca3d06c1dd27b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/weight_variance.png": {
+    "mtime": 1779391698.799322,
+    "hash": "900a7bcc699f16aa6b3dfa79ae8d02f0"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/beta_multi_point.png": {
+    "mtime": 1779391698.3737109,
+    "hash": "20e4214f2659d327399075532f2833d2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/true_beta.gif": {
+    "mtime": 1779391691.2702296,
+    "hash": "542ed62690d490578912771b659166bd"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/final_beta_error.png": {
+    "mtime": 1779391697.815097,
+    "hash": "18dc9cbcbee63c9970fd4cb328217da2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/ux_first_sensor.png": {
+    "mtime": 1779391698.287732,
+    "hash": "d9861c2ae71e76ac0303f9b60f64f681"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/snapshots_collage.png": {
+    "mtime": 1779391699.0607853,
+    "hash": "0e5dd046940199aca26cf19da18c4926"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/weight_entropy.png": {
+    "mtime": 1779391698.8231285,
+    "hash": "8e53e6825b1916e6d23fb8c61d167fb7"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/rmse_vel.png": {
+    "mtime": 1779391698.005792,
+    "hash": "dd50f81b2b62ef37a623d6380f37dba6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/rmse_beta.png": {
+    "mtime": 1779391697.9955323,
+    "hash": "1119407e916f9ae2950c5d77fd297c7c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/error_beta.gif": {
+    "mtime": 1779391697.7960653,
+    "hash": "84d6d723feaed0eee23487bba1eeab26"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/est_beta.gif": {
+    "mtime": 1779391694.5411427,
+    "hash": "f2f545faf178b09f5b572548781cd0f2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run05_random_scattered_16obs/weight_extremes.png": {
+    "mtime": 1779391698.777562,
+    "hash": "6d6a3f226c58aa00536f73fa8732e25e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump_test/beta_field.png": {
+    "mtime": 1785777373.3954043,
+    "hash": "1cebdb92fd8080582096feddd7419808"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump_test/velocity_anomaly.png": {
+    "mtime": 1785777373.5358415,
+    "hash": "bbefc1b23964f3b9e7f1096c14b3a100"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_double_bump_test/velocity_field.png": {
+    "mtime": 1785777373.500613,
+    "hash": "2aaf3d553ccc30249a8b7170bf862103"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run16_pseudorandom_wave_16obs_logbeta/ess_tracking.png": {
+    "mtime": 1784240517.3853285,
+    "hash": "1d17be5c16189d0177b629c38a5add40"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run16_pseudorandom_wave_16obs_logbeta/rmse_beta.png": {
+    "mtime": 1784240517.4871912,
+    "hash": "afa6b0c95cfa8b53a70342fe54ce95f8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/beta_pointwise_normalised.png": {
+    "mtime": 1779391674.974607,
+    "hash": "2013df7deb07218b4780d1a90d9e8f4a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/ess_evolution.png": {
+    "mtime": 1779391675.397555,
+    "hash": "33e524ba7da44a30458219c6fc7fbbcc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/particle_variance.png": {
+    "mtime": 1779391675.6017857,
+    "hash": "e21847607c46dffa66458dbb5936da90"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/beta_multi_point_normalised.png": {
+    "mtime": 1779391675.1875663,
+    "hash": "e4678655d8f18886006a9147eb5c5d01"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/beta_pointwise.png": {
+    "mtime": 1779391674.8513746,
+    "hash": "9d08c0577116687be31cee349d6bf412"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/weight_variance.png": {
+    "mtime": 1779391675.553674,
+    "hash": "1019570aa0b17290329083143d55b234"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/beta_multi_point.png": {
+    "mtime": 1779391675.1279314,
+    "hash": "d7bc61a46a1b6413962e37881405302f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/max_weight.png": {
+    "mtime": 1779304816.232484,
+    "hash": "6a8df121ca6f539ec8a47be41228f036"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/true_beta.gif": {
+    "mtime": 1779391668.0288312,
+    "hash": "2e7a3c69d6f9c467d47f48728a74a472"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/final_beta_error.png": {
+    "mtime": 1779391674.5703018,
+    "hash": "7e420607cdc51de3360910f2793a1c01"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/ux_first_sensor.png": {
+    "mtime": 1779391675.0392148,
+    "hash": "74562c728ba5a8cf92c1e8455fba7b7c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/snapshots_collage.png": {
+    "mtime": 1779391675.8200943,
+    "hash": "73ac936a9b3d8c0846cb64d3214ac41e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/weight_entropy.png": {
+    "mtime": 1779391675.5786262,
+    "hash": "3a4eef411f908ed6442118b57ac3f741"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/rmse_vel.png": {
+    "mtime": 1779391674.7626915,
+    "hash": "757d542d95b323357dde5a28e0264f68"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/rmse_beta.png": {
+    "mtime": 1779391674.7531412,
+    "hash": "ec4ed7140ef615d3a39982af2c8bc6d4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/error_beta.gif": {
+    "mtime": 1779391674.5531569,
+    "hash": "0c44f96286579ec44a4c162bd7a29975"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/est_beta.gif": {
+    "mtime": 1779391671.335913,
+    "hash": "686188e92d0bf50705bd98a90bcfc319"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run04_grid_aligned_16obs/weight_extremes.png": {
+    "mtime": 1779391675.532307,
+    "hash": "d4a0db574610e55ab8fe1977d9f2874c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/ice_flow_model_run/velocity_heatmap_final.png": {
+    "mtime": 1783361595.403909,
+    "hash": "8bb8d3ad826a863f35f1858500ff92b6"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/ice_flow_model_run/velocity_probe_sensor.png": {
+    "mtime": 1783361595.6379888,
+    "hash": "6336358ba74925b2a8c3547c1472522b"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/ice_flow_model_run/velocity_crosssection_anim.gif": {
+    "mtime": 1783361593.437697,
+    "hash": "c940f6e9f115694c5b2d7f4ee89f6e33"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/ice_flow_model_run/velocity_heatmap_t0.png": {
+    "mtime": 1783361595.3583546,
+    "hash": "4bab6f0a6509041ead3d108ab7077e4c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/velocity_rmse_abs.png": {
+    "mtime": 1785134884.6632266,
+    "hash": "b765fe62f6c6d5a856e1a71e1fd1c3d5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/velocity_field_truth_vs_mean.png": {
+    "mtime": 1785134909.0264084,
+    "hash": "29a9e2fbd8f30ccf9a4619f15002ba45"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/beta_field_truth_vs_mean.png": {
+    "mtime": 1785134908.98427,
+    "hash": "da74371064ae4742066c35e447e90727"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/velocity_rmse_rel.png": {
+    "mtime": 1785134884.6851363,
+    "hash": "0d1048149ea205737fd7364417d07afb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/ess_tracking.png": {
+    "mtime": 1785134826.8190656,
+    "hash": "fd74680d906178bcba7bd71e2e084894"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/sensor_trail.png": {
+    "mtime": 1785134827.9159155,
+    "hash": "b8a1308d7f11aa31532dab434ce1cf77"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/rmse_beta.png": {
+    "mtime": 1785134826.844461,
+    "hash": "f02d8f25fbc588e0a2cc4c25fd4e1069"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/crosssection_final.png": {
+    "mtime": 1785134827.776417,
+    "hash": "17682bec5779f0dd9f4dbb1c5e9e46ee"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/experiment_18_wavi_obs_seed2/obs_fit.png": {
+    "mtime": 1785134827.9632177,
+    "hash": "169fd6b6ec42f4d77620e46ffd2d18e2"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/true_beta_obs_anim.gif": {
+    "mtime": 1784094293.3193467,
+    "hash": "6e2919c00fc1610f4a799b6bc94df4e5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/sensor_trail_anim.gif": {
+    "mtime": 1784094381.5419405,
+    "hash": "31ee59fc94e156904bee7111933a10f8"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/ess_tracking.png": {
+    "mtime": 1784094383.2468824,
+    "hash": "f12e79d5274982f66279f621919b5a2f"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/est_beta_obs_anim.gif": {
+    "mtime": 1784094297.0171301,
+    "hash": "0d72df2f55b3be98ef44ad6e75ef1dfb"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/sensor_trail.png": {
+    "mtime": 1784094382.9023676,
+    "hash": "643abc6b95950f739ae607531813d5ac"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/rmse_beta.png": {
+    "mtime": 1784094383.4479158,
+    "hash": "6cf6148118485a8eca01ad6bfea50aca"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/crosssection_anim.gif": {
+    "mtime": 1784094302.8025932,
+    "hash": "02a90baa405a5155aba3f258811d766e"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/prior_pair.png": {
+    "mtime": 1784094288.3052003,
+    "hash": "18c9187206e8ea989d7ca06872c6e4e9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run11_pseudorandom_wave/crosssection_final.png": {
+    "mtime": 1784094302.9013855,
+    "hash": "1bcb0464f2425c1d2c15a74ab6b3f125"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/ess_evolution.png": {
+    "mtime": 1778800380.6399539,
+    "hash": "843e55ce9a80e811ca58254fc0700036"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/particle_variance.png": {
+    "mtime": 1778800380.6438067,
+    "hash": "6030df909ab33e4e6648c3accc100a9c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/beta_pointwise.png": {
+    "mtime": 1778800380.634731,
+    "hash": "08f79a1544b1c087be197b8430f93dd1"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/max_weight.png": {
+    "mtime": 1778800380.6424716,
+    "hash": "6a8df121ca6f539ec8a47be41228f036"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/true_beta.gif": {
+    "mtime": 1778800380.6333756,
+    "hash": "f8c5ac8012dd68380c7a9ccaaf8460cf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/final_beta_error.png": {
+    "mtime": 1778800380.641254,
+    "hash": "21968a724de19803810970746f26e236"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/weight_entropy.png": {
+    "mtime": 1778800380.646933,
+    "hash": "efe08894439aea60651d19112f57c0e5"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/rmse_vel.png": {
+    "mtime": 1778800380.6466892,
+    "hash": "446e0e2a03d85eef8c87bc7584e3eabf"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/rmse_beta.png": {
+    "mtime": 1778800380.6453416,
+    "hash": "d1787bed7c06b3d072008951f1edcd1a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/error_beta.gif": {
+    "mtime": 1778800380.618909,
+    "hash": "249071ef1fbd36a67b117b44c495a96c"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run03_wide_16obs/est_beta.gif": {
+    "mtime": 1778800380.627379,
+    "hash": "f8559f1f21f9e19c27238a1c8c808034"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/dynamics_verification.png": {
+    "mtime": 1779833911.0356522,
+    "hash": "01c3e9a8612699e4dbe21120e835b54a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/rmse_split_sensor_vs_unsensored.png": {
+    "mtime": 1779833910.232421,
+    "hash": "0a0d00191b7545586dbf91577aa1cdc4"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/rmse_compare_log.png": {
+    "mtime": 1779833910.05759,
+    "hash": "03f2e50275f2c60592b80d7769d9677a"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/maxweight_compare.png": {
+    "mtime": 1779833910.4824736,
+    "hash": "9f78823e86982eaa5d141808ad8b5609"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/beta_pointwise_compare.png": {
+    "mtime": 1779833910.788852,
+    "hash": "bb0fe349ab916cac43cccd2ec99b91d9"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/rmse_compare.png": {
+    "mtime": 1779833909.9227889,
+    "hash": "d9838b21f3e0fdd1e21abd1dd3f3cedc"
+  },
+  "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/glacier-code/particleda/results/run06_ablation_compare/ess_compare.png": {
+    "mtime": 1779833910.471772,
+    "hash": "276782e0932662c53d22fe18a60d1a76"
   },
   "/Users/tanyaaggarwal/Desktop/USRA-Summer-2026/particleDA/ParticleDA.jl/bootstrap-pf-experiments/results/benchmark_ess.png": {
     "mtime": 1778442316.5167778,

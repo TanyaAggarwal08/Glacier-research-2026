@@ -57,7 +57,9 @@ Returns a NamedTuple with:
 function run_pf_rmse(model_params::Dict;
                      NPRT::Int=1000, T::Int=100,
                      SEED_PF::Int=42, SEED_OBS::Int=123,
-                     return_trajectories::Bool=false)
+                     return_trajectories::Bool=false,
+                     ess_threshold_frac::Float64=0.5,
+                     sigma_jitter::Float64=30.0)
     # ParticleDA expects the params under the "glacier" key.
     Glacier._CFL_WARNED[] = false       # let CFL warning fire once per run
     model = Glacier.init(Dict("glacier" => model_params))
@@ -90,6 +92,15 @@ function run_pf_rmse(model_params::Dict;
     ensemble_mean[:, 1] = mean(particles; dims=2)[:, 1]
     ess_series = zeros(T)
 
+    # ── run10 PF recipe ──────────────────────────────────────────────────
+    # - Cumulative log-weights carried across steps (Liu & Chen 1998).
+    # - Resample only when ESS drops below `ess_threshold_frac · N`.
+    # - Post-resample RPF jitter (Musso et al. 2001) with marginal std
+    #   `sigma_jitter` (β units), using the model's smooth Cholesky noise.
+    log_weights   = zeros(NPRT)
+    ess_threshold = ess_threshold_frac * NPRT
+    n_resample    = 0
+
     for t in 1:T
         for p in 1:NPRT
             sp = view(particles, :, p)
@@ -97,17 +108,26 @@ function run_pf_rmse(model_params::Dict;
             ParticleDA.update_state_stochastic!(sp, model, rng_pf)
         end
         y_t = view(observations, :, t)
-        logw = zeros(NPRT)
         for p in 1:NPRT
-            logw[p] = ParticleDA.get_log_density_observation_given_state(
+            log_weights[p] += ParticleDA.get_log_density_observation_given_state(
                 y_t, view(particles, :, p), model)
         end
-        lmax = maximum(logw)
-        w = exp.(logw .- lmax); w ./= sum(w)
+        lmax = maximum(log_weights)
+        w = exp.(log_weights .- lmax); w ./= sum(w)
         ess_series[t] = 1.0 / sum(w .^ 2)
         ensemble_mean[:, t+1] = (particles * w)
-        idx = _systematic_resample(w, rng_pf)
-        particles = particles[:, idx]
+        if ess_series[t] < ess_threshold
+            idx = _systematic_resample(w, rng_pf)
+            particles = particles[:, idx]
+            if sigma_jitter > 0
+                for p in 1:NPRT
+                    Glacier._apply_noise!(view(particles, :, p), model, rng_pf,
+                                          sigma_jitter, 1)
+                end
+            end
+            log_weights .= 0.0
+            n_resample += 1
+        end
     end
 
     # ── global RMSE of ensemble mean vs truth, per timestep ──────────────

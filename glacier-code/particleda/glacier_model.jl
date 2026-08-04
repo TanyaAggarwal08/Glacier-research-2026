@@ -25,7 +25,18 @@ Base.@kwdef struct GlacierModelParameters{T<:AbstractFloat}
     # Lower clamp on β to keep the surrogate ux = 1000/β well-defined.
     # The default lets β range comfortably; only triggers in extreme noise tails.
     min_beta::T = 10.0
+    # Observation space. "velocity" observes ux = 1000/β with additive Gaussian
+    # noise of std obs_noise_std. "log_velocity" observes log(ux) = log(1000) -
+    # log(β). "log_beta" observes log(β) directly. The two log modes differ
+    # only by a sign and a constant, so they induce the same Gaussian likelihood
+    # on relative β-misfit. A single σ in log space therefore buys the same
+    # fractional accuracy at every β. In velocity space the same σ means 10 %
+    # relative error at β = 1000 but 30 % at β = 3000.
+    obs_space::String = "velocity"
     obs_noise_std::T = 0.10
+    # Delta method: σ_log ≈ σ_v / ux = σ_v · β/1000, so σ_v = 0.10 at the
+    # prior centre β = 2000 (ux = 0.5) is equivalent to σ_log ≈ 0.20.
+    obs_noise_std_log::T = 0.20
     advection_epsilon::T = 5e-4
     n_integration_step::Int = 1
     time_step::T = 1.0
@@ -37,6 +48,16 @@ Base.@kwdef struct GlacierModelParameters{T<:AbstractFloat}
     noise_length_scale::T = 30_000.0
     # Advection branch — "linear" (constant v=1) or "nonlinear" (v = 1 + ε·β).
     advection_type::String = "linear"
+    # Prior family. "double_bump" keeps the legacy sinusoid. "pseudo_random_wave"
+    # builds an Evensen-style separable wave field with a distinct truth and
+    # background realisation.
+    prior_mode::String = "double_bump"
+    prior_center_beta::T = 2000.0
+    prior_signal_scale_beta::T = 500.0
+    background_std_beta::T = 500.0
+    prior_max_wavenumber::Int = 2
+    prior_truth_seed::Int = 11
+    prior_background_seed::Int = 29
     # Ablation flag: when true, get_log_density returns 0 for every particle,
     # so weights stay uniform and the filter ignores observations entirely.
     # Truth generation and observation simulation are unaffected.
@@ -46,6 +67,7 @@ end
 struct GlacierModel{T<:AbstractFloat}
     parameters::GlacierModelParameters{T}
     beta_prior_mean::Vector{T}     # mean β field, flat, length nx*ny
+    truth_prior_mean::Vector{T}    # truth initial field used by pseudo-random runs
     sensor_indices::Vector{Int}
     obs_cov::ScalMat{T}
     obs_buffer::Matrix{T}
@@ -115,35 +137,92 @@ function _build_noise_factor(p::GlacierModelParameters{T}) where {T}
     return Matrix(cholesky(Symmetric(K)).L)
 end
 
-function init(parameters_dict::Dict, n_tasks::Int=1)
-    raw = get(parameters_dict, "glacier", Dict())
-    user_input = (; (Symbol(k) => v for (k, v) in raw)...)
-    p = GlacierModelParameters(; user_input...)
-
-    # Spatial frequency: n_modes full cycles across the domain. Higher → more
-    # ups and downs in the cross-section. n_modes = 1 was the original 4-lobe
-    # field; 3 gives a 6×6-lobe pattern (≈ 27 km half-wavelength on the 160 km
-    # domain), so a cross-section shows ~6 visible peaks.
+function _double_bump_prior(p::GlacierModelParameters{T}) where {T}
     n_modes = 3
     ω = n_modes * 2π / p.x_length
     xs = range(0.0, p.x_length; length=p.nx)
     ys = range(0.0, p.y_length; length=p.ny)
-    # Prior mean field — baseline 2000 plus sinusoid amplitude 2000.
-    # β range becomes [0, 4000] (with the min_beta floor catching the troughs).
     β_prior = [2000.0 + 2000.0 * sin(ω * xi) * sin(ω * yj) for yj in ys, xi in xs]
-    β_prior_flat = vec(β_prior)
+    return vec(β_prior)
+end
+
+function _normalised_pseudorandom_wave(
+    p::GlacierModelParameters{T},
+    rng::Random.AbstractRNG,
+) where {T}
+    nx, ny = p.nx, p.ny
+    wave = zeros(T, ny, nx)
+    for kx in 0:p.prior_max_wavenumber
+        for ky in 0:p.prior_max_wavenumber
+            kkx = 2π * kx / nx
+            kky = 2π * ky / ny
+            a   = randn(rng)
+            phx = randn(rng) * 2π
+            phy = randn(rng) * 2π
+            @inbounds for j in 1:ny
+                sy = sin(kky * j + phy)
+                for i in 1:nx
+                    wave[j, i] += a * sin(kkx * i + phx) * sy
+                end
+            end
+        end
+    end
+    σ = std(vec(wave))
+    σ == 0 && (σ = one(T))
+    wave ./= σ
+    return vec(wave)
+end
+
+function _pseudorandom_truth_background(p::GlacierModelParameters{T}) where {T}
+    rng_truth = MersenneTwister(p.prior_truth_seed)
+    rng_background = MersenneTwister(p.prior_background_seed)
+
+    truth_wave = _normalised_pseudorandom_wave(p, rng_truth)
+    background_wave = _normalised_pseudorandom_wave(p, rng_background)
+
+    truth_prior = p.prior_center_beta .+ p.prior_signal_scale_beta .* truth_wave
+    background_prior = truth_prior .+ p.background_std_beta .* background_wave
+    return truth_prior, background_prior
+end
+
+function _build_prior_fields(p::GlacierModelParameters{T}) where {T}
+    if p.prior_mode == "pseudo_random_wave"
+        return _pseudorandom_truth_background(p)
+    end
+    β_prior = _double_bump_prior(p)
+    return β_prior, β_prior
+end
+
+const _OBS_SPACES = ("velocity", "log_velocity", "log_beta")
+
+# The σ actually in force, given obs_space. Both obs_cov (used by the
+# likelihood) and sample_observation_given_state! read it, so the twin
+# experiment can never drift out of sync with the filter's assumed noise.
+function _obs_sigma(p::GlacierModelParameters)
+    return (p.obs_space == "log_velocity" || p.obs_space == "log_beta") ?
+           p.obs_noise_std_log : p.obs_noise_std
+end
+
+function init(parameters_dict::Dict, n_tasks::Int=1)
+    raw = get(parameters_dict, "glacier", Dict())
+    user_input = (; (Symbol(k) => v for (k, v) in raw)...)
+    p = GlacierModelParameters(; user_input...)
+    @assert p.obs_space in _OBS_SPACES "obs_space must be one of $(_OBS_SPACES), got $(p.obs_space)"
+
+    truth_prior_flat, β_prior_flat = _build_prior_fields(p)
 
     sensors = _build_sensor_indices(p)
     n_obs = length(sensors)
-    obs_cov = ScalMat(n_obs, p.obs_noise_std^2)
+    obs_cov = ScalMat(n_obs, _obs_sigma(p)^2)
 
     obs_buffer = zeros(Float64, n_obs, n_tasks)
     state_buffer = zeros(Float64, p.nx * p.ny, n_tasks)
     L = _build_noise_factor(p)
     noise_buffer = zeros(Float64, p.nx * p.ny, n_tasks)
 
-    return GlacierModel{Float64}(p, β_prior_flat, sensors, obs_cov,
-                                 obs_buffer, state_buffer, L, noise_buffer)
+    return GlacierModel{Float64}(p, β_prior_flat, truth_prior_flat, sensors,
+                                 obs_cov, obs_buffer, state_buffer, L,
+                                 noise_buffer)
 end
 
 # Add a smooth or iid Gaussian perturbation of marginal std σ to `state`.
@@ -311,8 +390,15 @@ function ParticleDA.get_observation_mean_given_state!(
 )
     ux_scratch = view(model.state_buffer, :, task_index)
     surrogate_ux!(ux_scratch, state, model.parameters.min_beta)
+    obs_space = model.parameters.obs_space
     @inbounds for (k, idx) in enumerate(model.sensor_indices)
-        observation_mean[k] = ux_scratch[idx]
+        if obs_space == "velocity"
+            observation_mean[k] = ux_scratch[idx]
+        elseif obs_space == "log_velocity"
+            observation_mean[k] = log(ux_scratch[idx])
+        else
+            observation_mean[k] = log(max(state[idx], model.parameters.min_beta))
+        end
     end
     return observation_mean
 end
@@ -325,7 +411,7 @@ function ParticleDA.sample_observation_given_state!(
     task_index::Integer=1,
 )
     ParticleDA.get_observation_mean_given_state!(observation, state, model, task_index)
-    σ = model.parameters.obs_noise_std
+    σ = _obs_sigma(model.parameters)
     @inbounds for k in eachindex(observation)
         observation[k] += σ * randn(rng)
     end
@@ -402,6 +488,13 @@ function ParticleDA.write_model_metadata(file::HDF5.File, model::GlacierModel)
                                reshape(model.beta_prior_mean, p.ny, p.nx))
         ds[:, :] = reshape(model.beta_prior_mean, p.ny, p.nx)
         attributes(ds)["Description"] = "Prior mean beta field"
+        attributes(ds)["Unit"] = "Pa s / m"
+    end
+    if !haskey(file, "beta_truth_prior")
+        ds, _ = create_dataset(file, "beta_truth_prior",
+                               reshape(model.truth_prior_mean, p.ny, p.nx))
+        ds[:, :] = reshape(model.truth_prior_mean, p.ny, p.nx)
+        attributes(ds)["Description"] = "Truth initial beta field"
         attributes(ds)["Unit"] = "Pa s / m"
     end
 end

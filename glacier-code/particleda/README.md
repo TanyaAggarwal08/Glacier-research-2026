@@ -20,11 +20,13 @@ glacier-code/particleda/
 ├── run_obs_vs_no_obs.jl          ← obs/no-obs ablation experiment
 ├── run_particle_tracking.jl      ← per-particle tracking driver (NONLINEAR adv)
 ├── run_linear_advection.jl       ← per-particle tracking driver (LINEAR adv)
+├── run_pseudorandom_wave.jl      ← pseudo-random wave prior/background run
 │
 ├── plot_glacier_pda.jl           ← plotter for the canonical run
 ├── plot_obs_vs_no_obs.jl         ← plotter for the ablation
 ├── plot_particle_tracking.jl     ← plotter for run07 (nonlinear)
 ├── plot_linear_advection.jl      ← plotter for run08 (linear)
+├── plot_pseudorandom_wave.jl     ← plotter for run11 (pseudo-random prior)
 │
 └── results/
     ├── run06_obs_baseline/
@@ -36,6 +38,7 @@ glacier-code/particleda/
 
 Heavy HDF5 files (≈1.2 GB each) live on the external SSD at
 `/Volumes/ZX20/USRA 2026/run07_particle_tracking/` and `run08_linear_advection_run/`.
+The pseudo-random wave run writes to `run11_pseudorandom_wave/`.
 
 ---
 
@@ -49,6 +52,7 @@ Edit the `yaml_params` Dict near the top of either driver:
 
 - [run_particle_tracking.jl](run_particle_tracking.jl) (lines ~41–53) — nonlinear advection
 - [run_linear_advection.jl](run_linear_advection.jl) (lines ~36–48) — linear advection
+- [run_pseudorandom_wave.jl](run_pseudorandom_wave.jl) — pseudo-random truth/background pair
 
 ```julia
 yaml_params = Dict("glacier" => Dict(
@@ -98,6 +102,8 @@ const OUT   = joinpath("glacier-code", "particleda", "results",
                        "my_new_run_name")
 ```
 
+For the pseudo-random wave run, use [run_pseudorandom_wave.jl](run_pseudorandom_wave.jl) and [plot_pseudorandom_wave.jl](plot_pseudorandom_wave.jl). That experiment uses `prior_mode = "pseudo_random_wave"` plus separate truth/background seeds.
+
 ### D. Switch between linear and nonlinear advection
 
 Open [glacier_model.jl](glacier_model.jl). Around line 230 there are two advection blocks: one commented out (NONLINEAR), one active (LINEAR). Swap which one is commented to flip the model. Also flip the CFL line just above (line ~222):
@@ -121,6 +127,13 @@ Three things you can tune:
 - **First `2000.0`** — baseline β. Sets the y-centre of the prior.
 - **Second `2000.0`** — sinusoid amplitude. Sets how big the bumps are.
 - **`n_modes`** — number of full cycles across the domain in each direction. `1` gives the original 4-lobe pattern (one bump up + one bump down across the row); `3` gives a 6×6-lobe pattern with about 6 visible peaks in any cross-section (~27 km half-wavelength). Higher → more ups and downs.
+
+If you want the pseudo-random Evensen-style prior instead, set `prior_mode = "pseudo_random_wave"` and tune:
+
+- `prior_center_beta` and `prior_signal_scale_beta` for the truth field
+- `background_std_beta` for the background offset
+- `prior_max_wavenumber` for the number of sine-wave modes
+- `prior_truth_seed` / `prior_background_seed` for reproducibility
 
 If you raise the baseline or amplitude so β goes above ~4000, also bump the y-axis `ylim` in the plotters (currently `(0, 4500)` — search both `plot_*.jl` files).
 
@@ -214,3 +227,4 @@ Numbered notes in [`glacier-notes/`](../../glacier-notes/) carry the rationale b
 - `18_smooth_noise_hourly_cadence.md` — switch to smooth noise + hourly cadence
 - `19_noise_pipeline_deepdive.md` — all the noise math
 - `20_particle_visualization.md` — what each visualisation actually shows
+- `24_pseudorandom_wave_run.md` — full reference for the run11 pseudo-random wave experiment
