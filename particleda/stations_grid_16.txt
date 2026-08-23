@@ -1,0 +1,22 @@
+# 16 sensors for the log-β observation-count experiment (run16).
+# Exact 4x4 subset of stations_crosssection_30.txt: x,y in {20,50,110,140} km.
+# Only the sensor COUNT changes vs run14 (30 -> 16); every location here is one
+# run14 already used, so any ESS/RMSE change isolates the effect of fewer
+# near-independent observations (the bootstrap-PF degeneracy lever).
+# Columns: x (m), y (m).
+20000.0, 20000.0
+50000.0, 20000.0
+110000.0, 20000.0
+140000.0, 20000.0
+20000.0, 50000.0
+50000.0, 50000.0
+110000.0, 50000.0
+140000.0, 50000.0
+20000.0, 110000.0
+50000.0, 110000.0
+110000.0, 110000.0
+140000.0, 110000.0
+20000.0, 140000.0
+50000.0, 140000.0
+110000.0, 140000.0
+140000.0, 140000.0

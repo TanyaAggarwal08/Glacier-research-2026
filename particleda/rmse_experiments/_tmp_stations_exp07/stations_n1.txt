@@ -1,0 +1,3 @@
+# Auto-generated for experiment_07_n_obs_sweep.jl (n=1).
+# Columns: x (m), y (m).
+142000.0, 150000.0

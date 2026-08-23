@@ -1,0 +1,7 @@
+# Auto-generated for experiment_07b_n_obs_sweep_seed2.jl (n=5).
+# Columns: x (m), y (m).
+102000.0, 26000.0
+70000.0, 10000.0
+86000.0, 26000.0
+74000.0, 70000.0
+38000.0, 118000.0

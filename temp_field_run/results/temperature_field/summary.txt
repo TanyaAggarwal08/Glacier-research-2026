@@ -1,0 +1,60 @@
+==============================================================================
+ β FIELD FROM VELOCITY OBSERVATIONS — temperature instead of advection
+==============================================================================
+ filter     : N = 500, T = 24 hourly steps (1.0 diurnal cycles), K = 10 stages
+ state      : the β field itself, 1600 cells  (map C, k are KNOWN)
+ known map  : β = 2000 − 40·(T − -10)
+ dynamics   : βₜ₊₁ = βₜ − k·(Tₜ₊₁ − Tₜ) + noise   — NO advection
+ background : truth + 300·(smooth wave, seed 29), ensemble spread 200
+ β noise    : process 10/step, jitter 20, correlation length 15 km
+ forcing    : diurnal ±10 °C, seasonal ±15 °C, wobble sd 1.0 °C — KNOWN/SHARED
+ observation: 16 sensors, log-speed, σ_obs = 0.50  (336 of 1600 cells within 10 km)
+ sliding    : weertman_m = 1.0   boundaries: u["north"] v["south", "east", "west"]
+ seeds      : filter 42, truth/obs 123   threads = 10
+
+ temperature: -4.89 … 14.51 °C over the run (interior mean)
+ generating truth trajectory + WAVI observations ...
+ truth β    : 798 … 2007 Pa·s/m over the run
+ background : RMSE 299.9 Pa·s/m vs truth (systematic, shared by all particles)
+ running tempered particle filter ...
+   step  1/24  ESS =  238.0  RMSE(β) =  290.6  [near  338.3  far  276.6]  T̄ =  -4.13 °C  (130 s)
+   step  2/24  ESS =  245.9  RMSE(β) =  284.3  [near  325.2  far  272.4]  T̄ =  -4.89 °C  (196 s)
+   step  3/24  ESS =  325.6  RMSE(β) =  281.6  [near  319.1  far  270.7]  T̄ =  -4.82 °C  (260 s)
+   step  4/24  ESS =  228.7  RMSE(β) =  276.2  [near  314.9  far  265.0]  T̄ =  -4.09 °C  (391 s)
+   step  5/24  ESS =  280.6  RMSE(β) =  269.6  [near  306.1  far  259.1]  T̄ =  -2.51 °C  (492 s)
+   step  6/24  ESS =  244.9  RMSE(β) =  265.8  [near  296.9  far  256.8]  T̄ =  -0.86 °C  (786 s)
+   step  7/24  ESS =  293.1  RMSE(β) =  260.1  [near  289.4  far  251.7]  T̄ =   1.39 °C  (935 s)
+   step  8/24  ESS =  249.1  RMSE(β) =  266.3  [near  291.3  far  259.3]  T̄ =   4.01 °C  (1081 s)
+   step  9/24  ESS =  381.1  RMSE(β) =  264.3  [near  294.6  far  255.6]  T̄ =   6.65 °C  (1152 s)
+   step 10/24  ESS =  225.8  RMSE(β) =  276.4  [near  304.1  far  268.6]  T̄ =   8.88 °C  (1298 s)
+   step 11/24  ESS =  228.5  RMSE(β) =  257.5  [near  293.2  far  247.1]  T̄ =  10.88 °C  (1448 s)
+   step 12/24  ESS =  241.8  RMSE(β) =  262.2  [near  284.6  far  255.9]  T̄ =  12.81 °C  (1491 s)
+   step 13/24  ESS =  291.6  RMSE(β) =  263.1  [near  276.6  far  259.4]  T̄ =  13.93 °C  (1525 s)
+   step 14/24  ESS =  248.1  RMSE(β) =  259.0  [near  280.4  far  253.0]  T̄ =  14.51 °C  (1603 s)
+   step 15/24  ESS =  240.1  RMSE(β) =  260.3  [near  283.0  far  253.9]  T̄ =  14.39 °C  (1684 s)
+   step 16/24  ESS =  355.0  RMSE(β) =  260.3  [near  285.8  far  253.1]  T̄ =  13.45 °C  (1727 s)
+   step 17/24  ESS =  223.5  RMSE(β) =  267.0  [near  282.4  far  262.7]  T̄ =  12.15 °C  (1805 s)
+   step 18/24  ESS =  317.8  RMSE(β) =  277.4  [near  291.4  far  273.5]  T̄ =  10.42 °C  (1842 s)
+   step 19/24  ESS =  265.4  RMSE(β) =  277.9  [near  291.2  far  274.3]  T̄ =   8.36 °C  (1879 s)
+   step 20/24  ESS =  247.1  RMSE(β) =  269.1  [near  285.7  far  264.6]  T̄ =   5.71 °C  (1950 s)
+   step 21/24  ESS =  367.3  RMSE(β) =  296.7  [near  300.0  far  295.7]  T̄ =   3.21 °C  (1984 s)
+   step 22/24  ESS =  378.6  RMSE(β) =  273.6  [near  288.0  far  269.7]  T̄ =   0.55 °C  (2019 s)
+   step 23/24  ESS =  359.6  RMSE(β) =  263.8  [near  287.1  far  257.3]  T̄ =  -1.48 °C  (2054 s)
+   step 24/24  ESS =  244.2  RMSE(β) =  264.0  [near  290.9  far  256.3]  T̄ =  -3.18 °C  (2125 s)
+
+------------------------------------------------------------------------------
+ RESULTS
+------------------------------------------------------------------------------
+ RMSE(β)      : 299.2  →  264.0   (11.8% reduction)
+   ├─ NEAR sensors ( 336 cells, ≤10 km) : 352.4  →  290.9   (17.5%)
+   └─ FAR  sensors (1264 cells)          : 283.4  →  256.3   (9.5%)
+ best RMSE(β) : 257.5 at step 11
+ error pattern correlation with step 0 : 0.850  (1 ⇒ the error field never deformed)
+ observability 1/β̄ : 5.56e-04 … 9.81e-04  (1.76× swing over the cycle)
+ ESS          : mean 280.1, min 223.5 at step 17  (threshold N/2 = 250)
+ resampling   : 13 events
+ WAVI solves  : 17524  (base N·T = 12000, overhead ×1.46)
+ wall clock   : 2125 s = 35.4 min  (0.121 s per solve)
+------------------------------------------------------------------------------
+
+ speed RMSE   : 2.75  →  2.13 m/yr

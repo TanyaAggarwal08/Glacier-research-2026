@@ -1,0 +1,59 @@
+==============================================================================
+ LEARNING β(T) FROM VELOCITY OBSERVATIONS — temperature-driven particle filter
+==============================================================================
+ filter     : N = 500, T = 24 hourly steps (1.0 diurnal cycles), K = 10 stages
+ state      : C (1) + k (1) + δ field (1600) = 1602 dimensions
+ truth map  : β = 2000 − 40·(T − -10) + δ
+ prior map  : C ~ N(2300, 300)   k ~ N(20, 12)   ← deliberately wrong
+ residual   : δ init sd 50, process sd 10, correlation length 15 km
+ forcing    : diurnal ±10 °C, seasonal ±15 °C, smooth wobble sd 1.0 °C — KNOWN
+ observation: 16 sensors, log-speed, σ_obs = 0.50
+ sliding    : weertman_m = 1.0   boundaries: u["north"] v["south", "east", "west"]
+ seeds      : filter 42, truth/obs 123   threads = 10
+
+ temperature over the run: -4.89 … 14.51 °C (interior mean)
+ generating truth trajectory + WAVI observations ...
+ truth β range over the run: 798 … 2007 Pa·s/m
+ running tempered particle filter ...
+   step  1/24  ESS =  356.7  C =  2182.9 ± 205.2  k =  20.38 ± 11.67  (22 s)
+   step  2/24  ESS =  236.2  C =  1991.1 ± 158.3  k =  22.61 ± 12.24  (70 s)
+   step  3/24  ESS =  371.1  C =  2000.8 ± 134.5  k =  23.03 ± 12.12  (96 s)
+   step  4/24  ESS =  235.5  C =  1941.8 ± 125.6  k =  24.99 ± 12.36  (157 s)
+   step  5/24  ESS =  391.0  C =  1929.9 ± 121.4  k =  28.23 ± 12.41  (194 s)
+   step  6/24  ESS =  293.6  C =  1911.7 ± 118.2  k =  29.68 ± 12.40  (232 s)
+   step  7/24  ESS =  248.8  C =  1914.4 ± 119.8  k =  31.04 ± 11.47  (314 s)
+   step  8/24  ESS =  427.8  C =  1918.3 ± 121.6  k =  33.36 ± 10.39  (359 s)
+   step  9/24  ESS =  339.6  C =  1913.6 ± 124.3  k =  34.70 ±  9.35  (7649 s)
+   step 10/24  ESS =  276.4  C =  1938.5 ± 140.4  k =  34.80 ±  9.73  (16115 s)
+   step 11/24  ESS =  233.4  C =  1972.7 ± 113.9  k =  41.59 ±  6.71  (22418 s)
+   step 12/24  ESS =  246.2  C =  1987.5 ± 107.6  k =  43.22 ±  5.95  (28323 s)
+   step 13/24  ESS =  269.1  C =  1973.1 ±  84.1  k =  44.21 ±  4.50  (28711 s)
+   step 14/24  ESS =  286.9  C =  1986.3 ± 103.3  k =  42.86 ±  5.04  (31220 s)
+   step 15/24  ESS =  243.3  C =  1950.2 ± 112.1  k =  39.79 ±  5.15  (34907 s)
+   step 16/24  ESS =  447.0  C =  1949.2 ± 110.3  k =  39.29 ±  4.88  (36001 s)
+   step 17/24  ESS =  369.9  C =  1954.6 ± 106.4  k =  39.03 ±  4.69  (38376 s)
+   step 18/24  ESS =  357.1  C =  1944.9 ± 101.2  k =  39.23 ±  4.52  (38522 s)
+   step 19/24  ESS =  292.4  C =  1940.0 ± 100.2  k =  39.02 ±  4.50  (39683 s)
+   step 20/24  ESS =  262.2  C =  1929.6 ± 102.6  k =  38.64 ±  4.61  (40318 s)
+   step 21/24  ESS =  247.9  C =  1933.3 ±  96.4  k =  38.75 ±  4.46  (40388 s)
+   step 22/24  ESS =  467.2  C =  1919.9 ± 101.8  k =  38.56 ±  4.80  (40457 s)
+   step 23/24  ESS =  407.3  C =  1967.6 ±  79.7  k =  39.79 ±  4.00  (40524 s)
+   step 24/24  ESS =  365.8  C =  1979.5 ±  69.3  k =  40.24 ±  3.67  (40592 s)
+
+------------------------------------------------------------------------------
+ RESULTS
+------------------------------------------------------------------------------
+ C (β at T_ref) : prior  2296.8  →  final  1979.5 ± 69.3   TRUTH  2000.0   error -20.5 (1.0%)
+ k (sensitivity): prior   19.85  →  final   40.24 ± 3.67   TRUTH   40.00   error +0.24 (0.6%)
+ RMSE(β)        : 439.3  →  67.4   (84.7% reduction)
+   ├─ from the MAP      : 440.1  →  22.1
+   └─ from the RESIDUAL : 2.0  →  63.5
+ δ spread       : filter 36.1 vs truth 51.4  (filter/truth = 0.70; ≫1 means
+                  the δ prior is wider than reality and the filter is
+                  committing to structure the 16 sensors cannot check)
+ ESS            : mean 319.7, min 233.4  (threshold N/2 = 250), 7 resamples
+ WAVI solves    : 15024  (base N·T = 12000, overhead ×1.25)
+ wall clock     : 40592 s = 676.5 min  (2.702 s per solve)
+------------------------------------------------------------------------------
+
+ speed RMSE     : 3.70  →  0.56 m/yr

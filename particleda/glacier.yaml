@@ -1,0 +1,36 @@
+# Canonical config — β-space state (no log transform).
+# State is β directly; noise added in β units; surrogate ux = 1000/β.
+#
+# Parameters preserve previous statistical behaviour at β ≈ 1000:
+#   init_std_beta    = 300   (matches old σ_init_θ = 0.30 in log space)
+#   process_std_beta = 7     (matches old σ_proc_θ = 0.007 in log space)
+filter:
+  nprt: 1000
+  verbose: true
+  output_filename: "glacier-code/particleda/results/particle_da.h5"
+  seed: 42
+
+model:
+  glacier:
+    nx: 40
+    ny: 40
+    x_length: 160000.0
+    y_length: 160000.0
+    sensor_stride: 100
+    init_std_beta: 300.0
+    process_std_beta: 7.0
+    obs_noise_std: 0.10
+    advection_epsilon: 0.0005
+    # Hourly filter cadence: time_step = 3600 s = 1 h.
+    # Internal advection dt = time_step / n_integration_step = 360 s,
+    # comfortably under the CFL safe ceiling (~457 s for dx=4 km, v≈1.75 m/s).
+    n_integration_step: 10
+    time_step: 3600.0
+    min_beta: 10.0
+    # Smooth (correlated) noise: marginal std = *_std_beta above,
+    # correlation length = noise_length_scale (m). Set <= 0 for iid.
+    noise_length_scale: 30000.0
+
+simulate_observations:
+  seed: 123
+  n_time_step: 200

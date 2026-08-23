@@ -1,0 +1,27 @@
+==============================================================================
+ TEMPERATURE-DRIVEN FLOW WITH SMOOTH PROCESS NOISE
+==============================================================================
+ run        : 73 steps over 3.0 days from day 200.0 (24 steps/day, Δt = 1.00 h)
+ noise      : σ_T = 2.00 °C, τ = 6.0 h  ⇒  ρ = 0.846 per step, ℓ = 15 km, seed = 42
+ sliding    : weertman_m = 1.0 (linear, τ_b = β·u)
+ boundaries : u_iszero = ["north"]   v_iszero = ["south", "east", "west"]
+ β map      : β = 2000 − 40·(T − -10), floor 10 Pa·s/m
+
+ solved   : 146 WAVI solves in 85 s (0.581 s/solve)
+
+------------------------------------------------------------------------------
+ RESULTS
+------------------------------------------------------------------------------
+ noise check      : realised sd 2.05 °C (target 2.00), lag-1 autocorr 0.851 (target 0.846)
+ temperature      : clean  -5.05 …  14.85 °C  |  noisy  -5.91 …  15.00 °C
+ basal drag β     : clean   1006 …   1802     |  noisy   1000 …   1836 Pa·s/m
+ ice speed        : clean  17.54 …  31.25     |  noisy  17.26 …  31.60 m/yr
+ speed swing      : 58.7% of mean (diurnal cycle amplitude)
+
+ corr(β, speed) over TIME (interior means) : clean -0.9895 | noisy -0.9891
+ corr(β, speed) POOLED over cells & times  : clean -0.8578 | noisy -0.8605
+   (the pooled value is weaker for BOTH runs — that gap is the spatial
+    lapse tilt in β which velocity does not follow linearly, not the noise)
+
+ noise impact on speed : 0.33 m/yr rms = 1.4% of the clean mean
+------------------------------------------------------------------------------
